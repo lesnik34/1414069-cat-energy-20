@@ -1,12 +1,189 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="page__body">
+    <header class="page-header">
+      <a href="index.html" class="page-header__logo">
+        <img src="#" class="page-header__logo-image" alt="Логотип Cat Energy" width="33" height="37">
+      </a>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+      <a href="index.html" class="page-header__company-title">
+        <svg class="page-header__company-image" aria-label="интернет магазин CAT ENERGY"></svg>
+      </a>
 
+      <nav class="page-header__navigation main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a href="index.html" class="main-navigation__link">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#" class="main-navigation__link">Каталог продукции</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#" class="main-navigation__link">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-main__program-invite program-invite">
+        <div class="program-invite__wrapper program-invite__promo-cocktail">
+          <h1 class="program-invite__title">Функциональное питание для котов</h1>
+
+          <h2 class="program-invite__subtitle">Занялся собой? Займись котом</h2>
+
+          <a href="#" class="program-invite__link main-button">Подобрать программу</a>
+        </div>
+      </section>
+
+      <section class="page-main__program-decisions program-decisions">
+        <h2 class="visually-hidden">Выбор каталога питания</h2>
+
+        <div class="program-decisions__article slimming">
+          <h2 class="program-decisions__title slimming__title">Похудение</h2>
+
+          <p class="program-decisions__title">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету!
+            Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+          </p>
+
+          <a href="#" class="program-decisions__link">Каталог Slim</a>
+        </div>
+
+        <div class="program-decisions__article weight-gain">
+          <h2 class="program-decisions__title weight-gain__title">Похудение</h2>
+
+          <p class="program-decisions__title">
+            Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+          </p>
+
+          <a href="#" class="program-decisions__link">Каталог Pro</a>
+        </div>
+      </section>
+
+      <section class="page-main__working-process working-process">
+        <h2 class="working-process__title">Как это работает</h2>
+
+        <ul class="working-process__list">
+          <li class="working-process__item working-process__healthy">
+            <p class="working-process__text">
+              Функциональное питание
+              содержит только полезные
+              питательные вещества.
+            </p>
+          </li>
+          <li class="working-process__item working-process__simple">
+            <p class="working-process__text">
+              Выпускается в виде порошка,
+              который нужно лишь залить
+              кипятком и готово.
+            </p>
+          </li>
+          <li class="working-process__item working-process__food">
+            <p class="working-process__text">
+              Замените один-два приема
+              обычной еды на наше
+              функциональное питание.
+            </p>
+          </li>
+          <li class="working-process__item working-process__fast">
+            <p class="working-process__text">
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-main__example example">
+        <h2 class="example__title">Живой пример</h2>
+
+        <p class="example__text">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без изнуряющих тренировок!
+          При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+
+        <div class="example__results results">
+          <div class="results__wrapper">
+            <span class="results__value">5 кг</span>
+
+            <span class="results__detail">Снижение веса</span>
+          </div>
+
+          <div class="results__wrapper">
+            <span class="results__value">60 дней</span>
+
+            <span class="results__detail">Затрачено времени</span>
+          </div>
+
+          <p class="results__generalizing">Затраты на питание: 15 000 руб.</p>
+        </div>
+
+        <div class="example__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__slide-before"></div>
+            <div class="slider__slide-after"></div>
+          </div>
+
+          <div class="slider__controls">
+            <span class="slider__control-before">Было</span>
+
+            <div class="slider__control">
+              <div class="slider__progress"></div>
+            </div>
+
+            <span class="slider__control-before">Стало</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section class="page-footer__destination destination">
+        <div class="destination__invite">
+          <h3 class="destination__title">Приглашаем к сотрудничеству дилеров!</h3>
+
+          <address class="destination__address">
+            ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург
+          </address>
+        </div>
+
+        <div class="destination__map"></div>
+      </section>
+
+      <section class="page-footer__about about">
+        <h2 class="visually-hidden">О нас</h2>
+
+        <a href="index.html" class="about__company-title">
+          <svg class="about__company-image" aria-label="интернет магазин CAT ENERGY"></svg>
+        </a>
+
+        <div class="about__social-networks social-networks">
+          <a href="#" class="social-networks__vk"></a>
+          <a href="#" class="social-networks__instagram"></a>
+          <a href="#" class="social-networks_facebook"></a>
+        </div>
+
+        <div class="about__creators">
+          <a href="https://htmlacademy.ru/" class="about__creators-link">HTML Academy</a>
+
+          <a href="https://htmlacademy.ru/" class="about__logo-link">
+            <svg class="about__creators-logo"></svg>
+          </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
