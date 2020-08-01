@@ -1,0 +1,11 @@
+.button {
+  &--primary {
+    background-color: $main-theme;
+    color: $basic-white;
+  }
+}
+
+.button--secondary {
+  background-color: $basic-grey;
+  color: $special-dark-grey;
+}

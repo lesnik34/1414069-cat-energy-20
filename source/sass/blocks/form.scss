@@ -1,0 +1,46 @@
+.form__title {
+  @include header-reset;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  margin-bottom: 37px;
+}
+
+.form__text {
+  @include text-reset;
+  text-transform: uppercase;
+}
+
+.form__field {
+  @include text-reset;
+  border: none;
+  padding-top: 26px;
+  padding-bottom: 27px;
+}
+
+.form__controls {
+  margin-bottom: 13px;
+}
+
+.form__label {
+  &--radio {
+    color: $mine-shaft;
+  }
+  //Перебивается цвет?
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
+
+.form__input {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+}
+
+.form__subtitle {
+  font-size: 24px;
+  line-height: 26px;
+}

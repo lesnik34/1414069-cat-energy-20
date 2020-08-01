@@ -1,0 +1,21 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: $basic-black;
+  text-decoration: none;
+}
+
+@mixin header-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin text-reset {
+  margin: 0;
+  padding: 0;
+}

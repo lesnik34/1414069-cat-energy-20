@@ -1,0 +1,30 @@
+.product-card__title {
+  @include header-reset;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.product-card__composition {
+  @include text-reset;
+}
+
+.product-card__name {
+  font-size: 12px;
+  line-height: 16px;
+  color: $special-dark-grey;
+}
+
+.product-card__value {
+  font-size: 12px;
+  line-height: 16px;
+  color: $special-dark-grey;
+}
+
+.product-card__purchase {
+  @include link-reset;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 0;
+}

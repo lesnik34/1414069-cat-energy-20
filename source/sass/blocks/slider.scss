@@ -1,0 +1,24 @@
+.slider__wrapper {
+  &--next {
+    background-image: url("../../img/after-mobile@1x.png");
+  }
+}
+
+.slider__slide {
+  &--previous {
+    background-image: url("../../img/before-mobile@1x.png");
+    background-color: $special-grey;
+  }
+  min-width: 311px;
+  height: 232px;
+}
+//Как прописать 2 модификатора в одном элементе?
+.slider__slide--transparent {
+  background-color: transparent;
+}
+
+.slider__control-btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+}
