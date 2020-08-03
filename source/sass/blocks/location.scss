@@ -7,7 +7,8 @@
 }
 
 .location__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;

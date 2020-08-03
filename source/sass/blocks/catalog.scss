@@ -1,5 +1,6 @@
 .catalog__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 36px;
@@ -15,7 +16,8 @@
 }
 
 .catalog__more-title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -23,7 +25,7 @@
 }
 
 .catalog__more-text {
-  @include text-reset;
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
   color: $special-dark-grey;

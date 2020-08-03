@@ -1,5 +1,6 @@
 .process__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 38px;
@@ -19,7 +20,7 @@
 }
 
 .process__text {
-  @include text-reset;
+  margin: 0;
   padding-left: 75px;
   color: $special-dark-grey;
 }

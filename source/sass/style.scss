@@ -1,11 +1,13 @@
-@import "variables.scss";
-@import "mixins.scss";
+@import "base/fonts";
+@import "base/variables.scss";
+@import "base/mixins.scss";
+@import "base/global";
 @import "blocks/page.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-nav.scss";
-@import "blocks/main";
-@import "blocks/promo";
-@import "blocks/programs";
+@import "blocks/main.scss";
+@import "blocks/promo.scss";
+@import "blocks/programs.scss";
 @import "blocks/process.scss";
 @import "blocks/example.scss";
 @import "blocks/slider.scss";
@@ -19,19 +21,3 @@
 @import "blocks/gift.scss";
 @import "blocks/form.scss";
 @import "blocks/button.scss";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
-.container {
-  width: 280px;
-  margin: 0 auto;
-}

@@ -1,5 +1,9 @@
+.form {
+  font-family: $custom-font;
+}
+
 .form__title {
-  @include header-reset;
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
@@ -7,12 +11,12 @@
 }
 
 .form__text {
-  @include text-reset;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .form__field {
-  @include text-reset;
+  margin: 0;
   border: none;
   padding-top: 26px;
   padding-bottom: 27px;
@@ -23,14 +27,17 @@
 }
 
 .form__label {
-  &--radio {
-    color: $mine-shaft;
-  }
-  //Перебивается цвет?
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark-grey;
+}
+
+.form__label-radio {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $mine-shaft;
 }
 
 .form__input {

@@ -1,5 +1,6 @@
 .product-card__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -7,7 +8,7 @@
 }
 
 .product-card__composition {
-  @include text-reset;
+  margin: 0;
 }
 
 .product-card__name {

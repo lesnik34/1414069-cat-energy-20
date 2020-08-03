@@ -1,5 +1,6 @@
 .extra__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 35px;
@@ -16,7 +17,8 @@
 }
 
 .extra__product {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -26,7 +28,7 @@
 }
 
 .extra__description {
-  @include text-reset;
+  margin: 0;
   margin-bottom: 15px;
 }
 

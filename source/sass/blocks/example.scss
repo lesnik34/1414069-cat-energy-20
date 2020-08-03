@@ -3,7 +3,8 @@
 }
 
 .example__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
@@ -11,12 +12,13 @@
 }
 
 .example__text {
-  @include text-reset;
+  margin: 0;
   color: $special-dark-grey;
   margin-bottom: 25px;
 }
 
 .example__value {
+  font-family: $custom-font;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -37,7 +39,8 @@
 }
 
 .example__total {
-  @include text-reset;
+  margin: 0;
+  font-family: $custom-font;
   line-height: 20px;
   text-transform: uppercase;
 }

@@ -2,20 +2,24 @@
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 }
 
 .promo__wrapper {
+  background-repeat: no-repeat;
+  background-position: center 130px;
+  background-size: cover;
+
   &--cocktail {
     background-image: url("../../img/index-can-mobile@1x.png");
   }
-  background-repeat: no-repeat;
-  background-position: center 130px;
 }
 
 .promo__title {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 36px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 36px;
   color: $basic-white;
   text-align: center;
@@ -23,9 +27,10 @@
 }
 
 .promo__subtitle {
-  @include header-reset;
+  margin: 0;
+  font-family: $custom-font;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
   color: $basic-white;

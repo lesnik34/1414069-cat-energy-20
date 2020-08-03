@@ -1,11 +1,22 @@
 .button {
+  font-family: $custom-font;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+
   &--primary {
     background-color: $main-theme;
     color: $basic-white;
   }
-}
 
-.button--secondary {
-  background-color: $basic-grey;
-  color: $special-dark-grey;
+  &--secondary {
+    background-color: $basic-grey;
+    color: $special-dark-grey;
+  }
+
+  &--arrow {
+    background-color: transparent;
+    color: $basic-black;
+  }
 }
