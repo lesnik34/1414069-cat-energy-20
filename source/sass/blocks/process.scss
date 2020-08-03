@@ -1,0 +1,26 @@
+.process__title {
+  margin: 0;
+  font-family: $custom-font;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 38px;
+  font-weight: normal;
+}
+
+.process__list {
+  @include list-reset;
+}
+
+.process__item {
+  margin-bottom: 24px;
+}
+
+.process__item:last-child {
+  margin-bottom: 0;
+}
+
+.process__text {
+  margin: 0;
+  padding-left: 75px;
+  color: $special-dark-grey;
+}

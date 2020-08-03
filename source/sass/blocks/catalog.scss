@@ -1,0 +1,40 @@
+.catalog__title {
+  margin: 0;
+  font-family: $custom-font;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 36px;
+}
+
+.catalog__list {
+  @include list-reset;
+}
+
+.catalog__card {
+  padding-top: 19px;
+  padding-bottom: 25px;
+}
+
+.catalog__more-title {
+  margin: 0;
+  font-family: $custom-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.catalog__more-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $special-dark-grey;
+  margin-bottom: 21px;
+}
+
+.catalog__show-more {
+  @include link-reset;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 0;
+}

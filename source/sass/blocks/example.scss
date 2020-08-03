@@ -1,0 +1,50 @@
+.example {
+  background-color: $special-grey;
+}
+
+.example__title {
+  margin: 0;
+  font-family: $custom-font;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 40px;
+  margin-bottom: 33px;
+}
+
+.example__text {
+  margin: 0;
+  color: $special-dark-grey;
+  margin-bottom: 25px;
+}
+
+.example__value {
+  font-family: $custom-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-top: 14px;
+  margin-bottom: 17px;
+  display: block;
+}
+
+.example__detail {
+  font-size: 12px;
+  line-height: 12px;
+  color: $special-dark-grey;
+  text-transform: lowercase;
+}
+
+.example__wrapper {
+  margin-bottom: 34px;
+}
+
+.example__total {
+  margin: 0;
+  font-family: $custom-font;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__results {
+  margin-bottom: 42px;
+}
