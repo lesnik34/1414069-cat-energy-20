@@ -2,13 +2,12 @@
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .promo__wrapper {
   background-repeat: no-repeat;
-  background-position: center 130px;
-  background-size: cover;
+  background-position: center 140px;
 
   &--cocktail {
     background-image: url("../../img/index-can-mobile@1x.png");

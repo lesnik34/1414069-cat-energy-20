@@ -1,10 +1,5 @@
 .slider__wrapper {
-  background-repeat: no-repeat;
-  background-position: center center;
 
-  &--next {
-    background-image: url("../../img/after-mobile@1x.png");
-  }
 }
 
 .slider__slide {
@@ -15,11 +10,10 @@
 
   &--previous {
     background-image: url("../../img/before-mobile@1x.png");
-    background-color: $special-grey;
   }
 
-  .slider__slide--transparent {
-    background-color: transparent;
+  &--next {
+    background-image: url("../../img/after-mobile@1x.png");
   }
 }
 

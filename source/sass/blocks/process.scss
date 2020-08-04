@@ -13,10 +13,56 @@
 
 .process__item {
   margin-bottom: 24px;
+  position: relative;
+  min-height: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $main-theme;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.process__item:last-child {
-  margin-bottom: 0;
+.process__item--healthy {
+  &::after {
+    background-image: url("../../img/advantage-leaf@1x.png");
+  }
+}
+
+.process__item--simple {
+  &::after {
+    background-image: url("../../img/advantage-powder@1x.png");
+  }
+}
+
+.process__item--food {
+  &::after {
+    background-image: url("../../img/advantage-dining@1x.png");
+  }
+}
+
+.process__item--fast {
+  &::after {
+    background-image: url("../../img/advantage-clock@1x.png");
+  }
 }
 
 .process__text {

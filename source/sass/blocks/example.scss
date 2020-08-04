@@ -25,21 +25,49 @@
   margin-top: 14px;
   margin-bottom: 17px;
   display: block;
+  text-align: center;
 }
 
 .example__detail {
+  $detail-width: 77px;
   font-size: 12px;
   line-height: 12px;
   color: $special-dark-grey;
   text-transform: lowercase;
+  position: absolute;
+  bottom: -14px;
+  width: $detail-width;
+  left: calc(50% - #{$detail-width} / 2);
+  text-align: center;
+  background-color: $special-grey;
 }
 
 .example__wrapper {
   margin-bottom: 34px;
+  display: flex;
+}
+
+.example__result {
+  margin-right: 31px;
+  flex-grow: 1;
+  border: 1px solid $silver;
+  border-radius: 5px;
+  position: relative;
+  min-width: 124px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .example__total {
   margin: 0;
+  font-family: $custom-font;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__total-value {
   font-family: $custom-font;
   line-height: 20px;
   text-transform: uppercase;

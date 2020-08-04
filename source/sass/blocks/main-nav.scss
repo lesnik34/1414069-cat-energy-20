@@ -5,6 +5,7 @@
 .main-nav__item {
   padding-top: 22px;
   padding-bottom: 24px;
+  border-top: 1px solid $mercury;
 }
 
 .main-nav__link {
@@ -16,4 +17,34 @@
   text-transform: uppercase;
   text-align: center;
   display: block;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 18px;
+  height: 18px;
+
+  &::after {
+    content: "";
+    top: 7px;
+    left: -3px;
+    position: absolute;
+    width: 25px;
+    height: 1.5px;
+    background-color: $basic-black;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: "";
+    top: 7px;
+    left: -3px;
+    position: absolute;
+    width: 25px;
+    height: 1.5px;
+    background-color: $basic-black;
+    transform: rotate(-45deg);
+  }
 }
