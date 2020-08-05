@@ -9,10 +9,11 @@
 
 .process__list {
   @include list-reset;
+  display: grid;
+  gap: 24px;
 }
 
 .process__item {
-  margin-bottom: 24px;
   position: relative;
   min-height: 60px;
 
@@ -23,17 +24,8 @@
     width: 60px;
     height: 60px;
     background-color: $main-theme;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 14px;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 30px;
-    height: 32px;
   }
 
   &:last-child {
@@ -42,25 +34,25 @@
 }
 
 .process__item--healthy {
-  &::after {
+  &::before {
     background-image: url("../../img/advantage-leaf@1x.png");
   }
 }
 
 .process__item--simple {
-  &::after {
+  &::before {
     background-image: url("../../img/advantage-powder@1x.png");
   }
 }
 
 .process__item--food {
-  &::after {
+  &::before {
     background-image: url("../../img/advantage-dining@1x.png");
   }
 }
 
 .process__item--fast {
-  &::after {
+  &::before {
     background-image: url("../../img/advantage-clock@1x.png");
   }
 }
@@ -69,4 +61,58 @@
   margin: 0;
   padding-left: 75px;
   color: $special-dark-grey;
+}
+
+@media (min-width: 768px) {
+  .process {
+    border-bottom: 1px solid $mercury;
+  }
+
+  .process__title {
+    font-size: 60px;
+    margin-bottom: 45px;
+  }
+
+  .process__list {
+    gap: 100px;
+    grid-template-columns: 283px 283px;
+    counter-reset: customCounter;
+  }
+
+  .process__item {
+    padding-right: 33px;
+    min-height: 220px;
+    position: relative;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      counter-increment: customCounter;
+      content: counter(customCounter);
+      color: $basic-grey;
+      font-family: $custom-font;
+      font-size: 280px;
+      position: absolute;
+      right: 0;
+      bottom: 110px;
+      z-index: 1;
+    }
+  }
+
+  .process__text {
+    padding: 0;
+    padding-top: 100px;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1440px) {
+  .process__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

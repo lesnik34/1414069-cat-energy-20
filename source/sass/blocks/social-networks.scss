@@ -1,3 +1,29 @@
 .social-networks__list {
   @include list-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  border-top: 1px solid $alto;
+  border-bottom: 1px solid $alto;
+  margin-bottom: 21px;
+}
+
+.social-networks__item {
+  margin-right: 34px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .social-networks__list {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
 }

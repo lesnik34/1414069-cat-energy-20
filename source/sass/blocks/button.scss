@@ -33,3 +33,15 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 20px;
+
+    &--primary {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 20px;
+    }
+  }
+}

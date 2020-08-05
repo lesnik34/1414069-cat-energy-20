@@ -1,5 +1,7 @@
 .main-nav__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav__item {
@@ -46,5 +48,35 @@
     height: 1.5px;
     background-color: $basic-black;
     transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    align-self: center;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+  }
+
+  .main-nav__item {
+    border: none;
+    padding: 0;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }

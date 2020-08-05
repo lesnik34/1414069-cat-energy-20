@@ -1,4 +1,26 @@
 .about {
   padding-top: 39px;
   padding-bottom: 22px;
+  background-color: $basic-grey;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__company {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .about__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about__company {
+    margin: 0;
+  }
 }
