@@ -25,17 +25,44 @@
   margin-top: 14px;
   margin-bottom: 17px;
   display: block;
+  text-align: center;
 }
 
 .example__detail {
+  $detail-width: 77px;
   font-size: 12px;
   line-height: 12px;
   color: $special-dark-grey;
   text-transform: lowercase;
+  position: absolute;
+  bottom: -14px;
+  width: $detail-width;
+  left: calc(50% - #{$detail-width} / 2);
+  text-align: center;
+  background-color: $special-grey;
 }
 
 .example__wrapper {
   margin-bottom: 34px;
+  display: flex;
+}
+
+.example__result {
+  margin-right: 31px;
+  flex-grow: 1;
+  border: 1px solid $silver;
+  border-radius: 5px;
+  position: relative;
+  min-width: 124px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.example__total-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .example__total {
@@ -43,8 +70,77 @@
   font-family: $custom-font;
   line-height: 20px;
   text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.example__total-value {
+  font-family: $custom-font;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .example__results {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 42px;
+}
+
+@media (min-height: 768px) {
+  .example {
+    background: linear-gradient($basic-white 0%, $basic-white 65%, $special-grey 65%, $special-grey 100%);
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 63px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    margin-bottom: 53px;
+  }
+
+  .example__results {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__wrapper {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .example__result {
+    margin-right: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .example__value {
+    font-size: 30px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+  }
+
+  .example__detail {
+    top: 5px;
+    left: auto;
+    position: relative;
+    background-color: $basic-white;
+    font-size: 14px;
+    width: auto;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  .example__total-wrapper {
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+  }
+
+  .example__total {
+    margin-bottom: 5px;
+  }
 }

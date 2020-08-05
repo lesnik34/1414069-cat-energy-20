@@ -1,5 +1,5 @@
 .main__promo {
-  padding-top: 27px;
+  padding-top: 62px;
   padding-bottom: 22px;
 }
 
@@ -28,4 +28,14 @@
 .main__information {
   padding-top: 27px;
   padding-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .main__programs {
+    padding-bottom: 45px;
+  }
+
+  .main__example {
+    padding-top: 43px;
+  }
 }

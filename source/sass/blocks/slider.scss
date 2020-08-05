@@ -1,26 +1,43 @@
-.slider__wrapper {
-  background-repeat: no-repeat;
-  background-position: center center;
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  &--next {
-    background-image: url("../../img/after-mobile@1x.png");
-  }
+.slider__wrapper {
+  display: flex;
+  width: 311px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .slider__slide {
-  min-width: 311px;
+  min-width: 0;
   height: 232px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;
+
 
   &--previous {
+    width: 50%;
     background-image: url("../../img/before-mobile@1x.png");
-    background-color: $special-grey;
+    background-position: left center;
   }
 
-  .slider__slide--transparent {
-    background-color: transparent;
+  &--next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background-image: url("../../img/after-mobile@1x.png");
+    background-position: right center;
   }
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider__control-btn {
@@ -28,4 +45,69 @@
   font-size: 16px;
   text-transform: uppercase;
   line-height: 20px;
+  margin-right: 17px;
+}
+
+.slider__control {
+  width: 84px;
+  height: 14px;
+  border: 1px solid $silver;
+  border-radius: 15px;
+  background-color: $basic-white;
+  display: flex;
+  margin-right: 17px;
+}
+
+.slider__progress {
+  width: 20%;
+  height: 6px;
+  background-color: $main-theme;
+  border-radius: inherit;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .slider__wrapper {
+    width: 708px;
+  }
+
+  .slider__slide {
+    height: 600px;
+
+    &--previous {
+      background-image: url("../../img/before-tablet@1x.png");
+    }
+
+    &--next {
+      background-image: url("../../img/after-tablet@1x.png");
+    }
+  }
+
+  .slider__controls {
+    width: 590px;
+  }
+
+  .slider__control-btn {
+    font-size: 20px;
+  }
+
+  .slider__control {
+    width: auto;
+    flex-grow: 1;
+    height: 6px;
+    border: none;
+    background-color: $alto;
+  }
+
+  .slider__progress {
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    width: 34px;
+    height: 34px;
+    margin: auto;
+    background-color: $main-theme;
+    border-radius: 50%;
+    border: 13px solid $basic-white;
+    position: relative;
+    top: -200%;
+  }
 }

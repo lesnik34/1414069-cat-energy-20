@@ -4,6 +4,7 @@
 
 .location__invite {
   padding-bottom: 22px;
+  display: flex;
 }
 
 .location__title {
@@ -12,6 +13,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  flex-grow: 1;
 }
 
 .location__address {
@@ -19,4 +21,30 @@
   line-height: 20px;
   font-style: normal;
   color: $special-dark-grey;
+  flex-grow: 1;
+}
+
+.location__image {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .location__invite {
+    justify-content: space-between;
+  }
+
+  .location__title {
+    flex-grow: 0;
+    max-width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .location__address {
+    max-width: 160px;
+    flex-grow: 0;
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

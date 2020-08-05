@@ -8,6 +8,8 @@
   &--primary {
     background-color: $main-theme;
     color: $basic-white;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   &--secondary {
@@ -16,7 +18,30 @@
   }
 
   &--arrow {
-    background-color: transparent;
     color: $basic-black;
+    position: relative;
+    padding-right: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 7px;
+      width: 24px;
+      height: 12px;
+      background-image: url("../../img/icon-right-arrow-long.svg");
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 20px;
+
+    &--primary {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 20px;
+    }
   }
 }

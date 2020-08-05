@@ -1,6 +1,19 @@
+.creators {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .creators__link {
   @include link-reset;
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
+}
+
+@media (min-width: 768px) {
+  .creators {
+    width: auto;
+  }
 }

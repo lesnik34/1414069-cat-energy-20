@@ -1,3 +1,40 @@
 .logo {
   @include link-reset;
+  display: block;
+}
+
+.logo__image {
+  //min-width: 228px;
+
+  &--medium {
+    display: none;
+  }
+
+  &--big {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo__image {
+    &--small {
+      display: none;
+    }
+
+    &--medium {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo__image {
+    &--medium {
+      display: none;
+    }
+
+    &--big {
+      display: block;
+    }
+  }
 }
