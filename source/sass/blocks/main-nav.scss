@@ -2,6 +2,8 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .main-nav__item {
@@ -59,6 +61,8 @@
 
   .main-nav__list {
     flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .main-nav__item {

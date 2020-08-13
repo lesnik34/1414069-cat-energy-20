@@ -2,7 +2,7 @@
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
+  background-size: 400px;
 }
 
 .promo__wrapper {
@@ -15,7 +15,7 @@
 }
 
 .promo__title {
-  margin: 0;
+  margin: 0 auto;
   font-family: $custom-font;
   font-size: 36px;
   font-weight: 400;
@@ -23,6 +23,7 @@
   color: $basic-white;
   text-align: center;
   margin-bottom: 25px;
+  max-width: 340px;
 }
 
 .promo__subtitle {

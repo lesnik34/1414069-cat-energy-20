@@ -4,6 +4,17 @@
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 35px;
+  display: flex;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: $main-theme;
+    align-self: center;
+  }
 }
 
 .extra__list {
@@ -14,6 +25,13 @@
 .extra__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid $silver;
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    border-bottom: 1px solid $silver;
+  }
 }
 
 .extra__product {
@@ -30,6 +48,8 @@
 .extra__description {
   margin: 0;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .extra__name {
@@ -42,6 +62,7 @@
   font-size: 14px;
   line-height: 14px;
   color: $special-dark-grey;
+  margin: 0;
 }
 
 .extra__purchase {
@@ -49,4 +70,78 @@
   font-size: 16px;
   line-height: 0;
   text-transform: uppercase;
+  flex-grow: 1;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  color: $basic-white;
+}
+
+@media (min-width: $tablet-width) {
+  .extra__title {
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 5%;
+      margin-right: 10px;
+      background-color: #68b738;
+      align-self: center;
+    }
+  }
+
+  .extra__item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 38px;
+    padding-right: 38px;
+    border: 1px solid $basic-grey;
+
+    &:last-child {
+      border-bottom: 1px solid $basic-grey;
+    }
+  }
+
+  .extra__purchase {
+    width: 100%;
+  }
+
+  .extra__name {
+    margin-right: 51px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .extra__title {
+    width: 100%;
+  }
+
+  .extra__list {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 79px;
+  }
+
+  .extra__item {
+    border-left: none;
+    border-right: none;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  .extra__purchase {
+    min-width: 244px;
+    width: auto;
+    flex-grow: 0;
+  }
+
+  .extra__product {
+    margin-right: auto;
+  }
 }

@@ -13,17 +13,24 @@
 .form__text {
   margin: 0;
   text-transform: uppercase;
+  max-width: 230px;
 }
 
 .form__field {
   margin: 0;
+  padding: 27px 0;
   border: none;
-  padding-top: 26px;
-  padding-bottom: 27px;
+
+  &:last-child {
+    border-bottom: 1px solid $alto;
+    border-top: 1px solid $alto;
+  }
 }
 
 .form__controls {
   margin-bottom: 13px;
+  display: flex;
+  align-items: baseline;
 }
 
 .form__label {
@@ -31,6 +38,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark-grey;
+  margin-right: 14px;
 }
 
 .form__label-radio {
@@ -45,9 +53,81 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark-grey;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100px;
+  padding: 13px 15px;
+  border: 1px solid $mercury;
 }
 
 .form__subtitle {
   font-size: 24px;
   line-height: 26px;
+  display: flex;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: #68b738;
+    align-self: center;
+  }
+}
+
+.form__comment {
+  width: 100%;
+  border: 1px solid $mercury;
+  resize: none;
+}
+
+.form__label-check {
+  font-family: $custom-font;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__submit {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.form__clarification {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__field {
+    &:last-child {
+      border: 1px solid $alto;
+      padding: 26px;
+    }
+  }
+
+  .form__brake {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    display: flex;
+    padding: 66px 0;
+  }
+
+  .form__field {
+    flex-grow: 1;
+
+    &:first-child {
+      margin-right: 80px;
+      padding: 0;
+    }
+
+    &--no-wrap {
+      display: flex;
+    }
+  }
 }

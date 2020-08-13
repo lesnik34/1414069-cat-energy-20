@@ -75,12 +75,12 @@
 
   .process__list {
     gap: 100px;
-    grid-template-columns: 283px 283px;
+    grid-template-columns: 1fr 1fr;
     counter-reset: customCounter;
   }
 
   .process__item {
-    padding-right: 33px;
+    padding-right: 16.5%;
     min-height: 220px;
     position: relative;
 
