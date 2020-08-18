@@ -1,5 +1,9 @@
 .location {
   padding-top: 28px;
+
+  &--form {
+    background-color: $basic-grey;
+  }
 }
 
 .location--catalog {
@@ -14,25 +18,25 @@
 
 .location__title {
   margin: 0;
+  width: 50%;
   font-family: $custom-font;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
-  flex-grow: 1;
+  font-weight: 400;
 }
 
 .location__address {
+  width: 50%;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
   color: $special-dark-grey;
-  flex-grow: 1;
 }
 
 .location__map {
   position: relative;
   background-image: url("../../img/bg-map-mobile@1x.png");
-  background-color: red;
   background-size: cover;
   background-position: center center;
   margin-right: calc(50% - 50vw);
@@ -55,9 +59,14 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
+  .location {
+    padding-top: 66px;
+  }
+
   .location__invite {
     justify-content: space-between;
+    padding-bottom: 60px;
   }
 
   .location__title {
@@ -73,5 +82,55 @@
     text-align: right;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .location__break {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .location__map {
+    background-image: url("../../img/bg-map-tablet@1x.png");
+    height: 400px;
+
+    &::after {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .location {
+    padding-top: 0;
+  }
+
+  .location__wrapper {
+    position: relative;
+  }
+
+  .location__map {
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    height: 400px;
+
+    &::after {
+      left: auto;
+      right: 25.16%;
+    }
+  }
+
+  .location__invite {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 2;
+    background-color: $basic-white;
+    padding-top: 66px;
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  .location__title {
+    margin-right: 87px;
   }
 }

@@ -13,7 +13,6 @@
 }
 
 .main-nav__link {
-  @include link-reset;
   font-family: $custom-font;
   font-size: 20px;
   font-weight: 500;
@@ -21,6 +20,8 @@
   text-transform: uppercase;
   text-align: center;
   display: block;
+  text-decoration: none;
+  color: $basic-black;
 }
 
 .main-nav__toggle {
@@ -53,7 +54,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-nav {
     display: flex;
     align-self: center;
@@ -78,9 +79,32 @@
   .main-nav__link {
     font-size: 18px;
     font-weight: 400;
+    position: relative;
+
+    &--active::after {
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $main-theme;
+    }
   }
 
   .main-nav__toggle {
     display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__link--index {
+    color: $basic-white;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .main-nav__link--index.main-nav__link--active::after {
+    background-color: $basic-white;
   }
 }

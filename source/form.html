@@ -28,7 +28,7 @@
             <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Подбор программы</a>
+            <a href="form.html" class="main-nav__link main-nav__link--active">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -67,23 +67,23 @@
                 <legend class="visually-hidden">Желаемый результат</legend>
 
                 <div class="form__controls">
-                  <input class="form__input-radio" type="radio" name="wish-result" value="slimming" id="form__slimming" checked>
+                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="slimming" id="form__slimming" checked>
                   <label class="form__label-radio" for="form__slimming">Похудение</label>
                 </div>
 
                 <div class="form__controls">
-                  <input class="form__input-radio" type="radio" name="wish-result" value="weight gain" id="form__weight-gain">
+                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="weight gain" id="form__weight-gain">
                   <label class="form__label-radio" for="form__weight-gain">Набор массы</label>
                 </div>
 
                 <div class="form__controls">
-                  <input class="form__input-radio" type="radio" name="wish-result" value="need help" id="form__need-help">
+                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="need help" id="form__need-help">
                   <label class="form__label-radio" for="form__need-help">Не знаю (нужен совет)</label>
                 </div>
               </fieldset>
             </div>
 
-            <fieldset class="form__field form__field--no-wrap">
+            <fieldset class="form__field form__field--contacts">
               <legend class="form__subtitle">Контактные данные <br class="form__brake"> (владельца кота)</legend>
 
               <div class="form__controls">
@@ -106,48 +106,50 @@
               </div>
             </fieldset>
 
-            <fieldset class="form__field form__field--no-wrap">
+            <fieldset class="form__field form__field--extra">
               <legend class="form__subtitle">Дополнительно</legend>
 
-              <div class="form__controls">
-                <input class="form__check" type="checkbox" name="additional" value="sweetener" id="form__sweetener" checked>
+              <div class="form__controls form__controls--extra">
+                <input class="form__check visually-hidden" type="checkbox" name="additional" value="sweetener" id="form__sweetener" checked>
                 <label class="form__label-check" for="form__sweetener">Сахарозаменитель</label>
               </div>
 
-              <div class="form__controls">
-                <input class="form__check" type="checkbox" name="additional" value="water" id="form__water">
+              <div class="form__controls form__controls--extra">
+                <input class="form__check visually-hidden" type="checkbox" name="additional" value="water" id="form__water">
                 <label class="form__label-check" for="form__water">Питьевая вода</label>
               </div>
 
-              <div class="form__controls">
-                <input class="form__check" type="checkbox" name="additional" value="milk" id="form__milk">
+              <div class="form__controls form__controls--extra">
+                <input class="form__check visually-hidden" type="checkbox" name="additional" value="milk" id="form__milk">
                 <label class="form__label-check" for="form__milk">Молоко</label>
               </div>
 
-              <div class="form__controls">
-                <input class="form__check" type="checkbox" name="additional" value="vitamins" id="form__vitamins">
+              <div class="form__controls form__controls--extra">
+                <input class="form__check visually-hidden" type="checkbox" name="additional" value="vitamins" id="form__vitamins">
                 <label class="form__label-check" for="form__vitamins">Витамины</label>
               </div>
             </fieldset>
 
-            <button class="form__submit button button--primary" type="submit">Отправить заявку</button>
+            <div class="form__footer">
+              <button class="form__submit button button--primary" type="submit">Отправить заявку</button>
 
-            <p class="form__clarification"><sup>*</sup> - Обязательные поля</p>
+              <p class="form__clarification"><sup>*</sup> - Обязательные поля</p>
+            </div>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <section class="footer__location location">
-        <div class="container">
+      <section class="footer__location location location--form">
+        <div class="container location__wrapper">
           <div class="location__invite">
             <h3 class="location__title">Приглашаем к сотрудничеству дилеров!</h3>
 
             <address class="location__address">
               ул. Большая
               Конюшенная, д. 19/8
-              Санкт-Петербург
+              <span class="location__break">Санкт-Петербург</span>
             </address>
           </div>
 

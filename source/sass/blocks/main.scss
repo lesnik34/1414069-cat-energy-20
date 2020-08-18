@@ -17,7 +17,6 @@
 }
 
 .main__catalog {
-  padding-top: 27px;
   padding-bottom: 28px;
 }
 
@@ -30,12 +29,30 @@
   padding-bottom: 32px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main__programs {
     padding-bottom: 45px;
   }
 
   .main__example {
     padding-top: 43px;
+  }
+
+  .main__catalog {
+    padding-top: 64px;
+  }
+
+  .main__information {
+    padding-top: 64px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__promo {
+    padding-bottom: 82px;
+  }
+
+  .main__example {
+    padding-bottom: 64px;
   }
 }

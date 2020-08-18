@@ -49,7 +49,7 @@
 
 .example__result {
   margin-right: 31px;
-  flex-grow: 1;
+  width: 50%;
   border: 1px solid $silver;
   border-radius: 5px;
   position: relative;
@@ -85,13 +85,14 @@
   margin-bottom: 42px;
 }
 
-@media (min-height: $tablet-width) {
+@media (min-width: $tablet-width) {
   .example {
     background: linear-gradient($basic-white 0%, $basic-white 65%, $special-grey 65%, $special-grey 100%);
   }
 
   .example__title {
     font-size: 60px;
+    line-height: 60px;
     margin-bottom: 63px;
   }
 
@@ -142,6 +143,7 @@
 
   .example__total {
     margin-bottom: 5px;
+    margin-right: 0;
   }
 }
 
@@ -179,6 +181,7 @@
 
   .example__total {
     margin-right: 63px;
+    margin-bottom: 0;
   }
 
   .example__wrapper {

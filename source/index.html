@@ -6,7 +6,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--index">
     <header class="header">
       <div class="container header__wrapper">
         <a href="index.html" class="header__logo logo" aria-label="Логотип Cat Energy">
@@ -22,13 +22,13 @@
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html" class="main-nav__link">Главная</a>
+              <a href="index.html" class="main-nav__link main-nav__link--index main-nav__link--active">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--index">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">Подбор программы</a>
+              <a href="form.html" class="main-nav__link main-nav__link--index">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -169,14 +169,14 @@
 
     <footer class="footer">
       <section class="footer__location location">
-        <div class="container">
+        <div class="container location__wrapper">
           <div class="location__invite">
             <h3 class="location__title">Приглашаем к сотрудничеству дилеров!</h3>
 
             <address class="location__address">
               ул. Большая
               Конюшенная, д. 19/8
-              Санкт-Петербург
+              <span class="location__break">Санкт-Петербург</span>
             </address>
           </div>
 

@@ -6,6 +6,18 @@
   padding-bottom: 43px;
   display: flex;
   justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon-gift.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .gift__text {
@@ -22,8 +34,13 @@
   .gift {
     justify-content: flex-end;
     background-size: cover;
+    background-position: center -360px;
     padding: 70px 0;
     padding-right: 124px;
+
+    &::before {
+      left: 78px;
+    }
   }
 
   .gift__text {
@@ -37,5 +54,11 @@
     padding: 0 30px;
     padding-top: 185px;
     padding-bottom: 42px;
+    background-position: center center;
+  }
+
+  .gift__text {
+    text-align: center;
+    margin: auto;
   }
 }
