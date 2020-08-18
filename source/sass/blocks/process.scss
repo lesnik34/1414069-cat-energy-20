@@ -63,24 +63,25 @@
   color: $special-dark-grey;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .process {
     border-bottom: 1px solid $mercury;
   }
 
   .process__title {
     font-size: 60px;
+    line-height: 60px;
     margin-bottom: 45px;
   }
 
   .process__list {
     gap: 100px;
-    grid-template-columns: 283px 283px;
+    grid-template-columns: 1fr 1fr;
     counter-reset: customCounter;
   }
 
   .process__item {
-    padding-right: 33px;
+    padding-right: 16.5%;
     min-height: 220px;
     position: relative;
 
@@ -111,8 +112,12 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .process__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .process {
+    border: none;
   }
 }

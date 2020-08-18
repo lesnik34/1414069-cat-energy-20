@@ -1,10 +1,9 @@
 .logo {
-  @include link-reset;
   display: block;
 }
 
 .logo__image {
-  //min-width: 228px;
+  min-width: 170px;
 
   &--medium {
     display: none;
@@ -15,7 +14,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .logo__image {
     &--small {
       display: none;
@@ -27,7 +26,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .logo__image {
     &--medium {
       display: none;

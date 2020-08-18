@@ -1,7 +1,10 @@
 @import "base/fonts";
 @import "base/variables.scss";
+@import "blocks/visually-hiden.scss";
+@import "blocks/container.scss";
 @import "base/mixins.scss";
 @import "base/global";
+@import "blocks/button.scss";
 @import "blocks/page.scss";
 @import "blocks/header.scss";
 @import "blocks/logo.scss";
@@ -22,4 +25,3 @@
 @import "blocks/extra.scss";
 @import "blocks/gift.scss";
 @import "blocks/form.scss";
-@import "blocks/button.scss";

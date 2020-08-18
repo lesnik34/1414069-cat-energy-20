@@ -2,6 +2,22 @@
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  padding-top: 186px;
+  padding-bottom: 43px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon-gift.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .gift__text {
@@ -9,4 +25,40 @@
   color: $basic-white;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  max-width: 161px;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .gift {
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center -360px;
+    padding: 70px 0;
+    padding-right: 124px;
+
+    &::before {
+      left: 78px;
+    }
+  }
+
+  .gift__text {
+    text-align: start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    width: 245px;
+    padding: 0 30px;
+    padding-top: 185px;
+    padding-bottom: 42px;
+    background-position: center center;
+  }
+
+  .gift__text {
+    text-align: center;
+    margin: auto;
+  }
 }

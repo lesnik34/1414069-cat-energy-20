@@ -6,13 +6,13 @@
 }
 
 .creators__link {
-  @include link-reset;
+  text-decoration: none;
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .creators {
     width: auto;
   }

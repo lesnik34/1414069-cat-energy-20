@@ -111,3 +111,9 @@
     top: -200%;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slider__slide {
+    height: 510px;
+  }
+}

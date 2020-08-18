@@ -14,7 +14,7 @@
   margin-bottom: 32px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .about__wrapper {
     flex-direction: row;
     justify-content: space-between;
