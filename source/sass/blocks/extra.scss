@@ -169,12 +169,13 @@
     justify-content: flex-start;
     align-content: center;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .extra__purchase {
     min-width: 244px;
     width: auto;
-    flex-grow: 0;
+    flex-grow: 1;
     margin-top: 0;
   }
 
@@ -182,7 +183,7 @@
     margin-right: 80px;
     font-size: 20px;
     line-height: 20px;
-    width: 240px;
+    width: 230px;
   }
 
   .extra__name {
@@ -195,7 +196,11 @@
     font-size: 16px;
     line-height: 28px;
     margin-left: auto;
-    margin-right: 10px;
     text-align: left;
+  }
+
+  .extra__description {
+    min-width: 285px;
+    margin-right: 10px;
   }
 }

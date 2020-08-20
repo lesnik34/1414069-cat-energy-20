@@ -22,6 +22,15 @@
   display: block;
   text-decoration: none;
   color: $basic-black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {

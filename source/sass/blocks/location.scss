@@ -4,17 +4,18 @@
   &--form {
     background-color: $basic-grey;
   }
-}
 
-.location--catalog {
-  background-color: $basic-grey;
-  padding-top: 28px;
+  &--catalog {
+    background-color: $basic-grey;
+    padding-top: 28px;
+  }
 }
 
 .location__invite {
   padding-bottom: 22px;
   display: flex;
 }
+
 
 .location__title {
   margin: 0;
