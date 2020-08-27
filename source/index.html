@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page page--index" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,32 +118,34 @@
 
       <section class="main__example example">
         <div class="container example__container">
-          <h2 class="example__title">Живой пример</h2>
+          <div class="example_main-wrap">
+            <h2 class="example__title">Живой пример</h2>
 
-          <p class="example__text">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
 
-          <div class="example__results">
-            <div class="example__wrapper">
-              <div class="example__result">
-                <span class="example__value">5 кг</span>
+            <div class="example__results">
+              <div class="example__wrapper">
+                <div class="example__result">
+                  <span class="example__value">5 кг</span>
 
-                <span class="example__detail">Снижение веса</span>
+                  <span class="example__detail">Снижение веса</span>
+                </div>
+
+                <div class="example__result">
+                  <span class="example__value">60 дней</span>
+
+                  <span class="example__detail">Затрачено времени</span>
+                </div>
               </div>
 
-              <div class="example__result">
-                <span class="example__value">60 дней</span>
-
-                <span class="example__detail">Затрачено времени</span>
+              <div class="example__total-wrapper">
+                <p class="example__total">Затраты на питание:</p>
+                <span class="example__total-value"> 15 000 руб.</span>
               </div>
-            </div>
-
-            <div class="example__total-wrapper">
-              <p class="example__total">Затраты на питание:</p>
-              <span class="example__total-value"> 15 000 руб.</span>
             </div>
           </div>
 
@@ -154,13 +156,13 @@
             </div>
 
             <div class="slider__controls">
-              <span class="slider__control-btn">Было</span>
+              <button class="slider__control-btn" type="button">Было</button>
 
               <div class="slider__control">
-                <div class="slider__progress"></div>
+                <div class="slider__progress" tabindex="0"></div>
               </div>
 
-              <span class="slider__control-btn">Стало</span>
+              <button class="slider__control-btn" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -176,11 +178,12 @@
             <address class="location__address">
               ул. Большая
               Конюшенная, д. 19/8
+
               <span class="location__break">Санкт-Петербург</span>
             </address>
           </div>
 
-          <div class="location__map">
+          <div class="location__map" id="map">
           </div>
         </div>
       </section>
@@ -250,5 +253,11 @@
         </div>
       </section>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=13176f80-7b58-4301-b34c-362e451e03ac&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/options.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -110,7 +110,9 @@
     padding-left: 38px;
     padding-right: 38px;
     padding-top: 26px;
-    border: 1px solid $basic-grey;
+    border-top: 1px solid $basic-grey;
+    border-right: 1px solid $basic-grey;
+    border-left: 1px solid $basic-grey;
 
     &:last-child {
       border-bottom: 1px solid $basic-grey;
@@ -167,7 +169,7 @@
     border-left: none;
     border-right: none;
     justify-content: flex-start;
-    align-content: center;
+    align-items: center;
     padding-left: 0;
     padding-right: 0;
   }

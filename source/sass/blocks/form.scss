@@ -45,6 +45,13 @@
   }
 }
 
+.form__field-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .form__controls {
   margin-bottom: 13px;
   display: flex;
@@ -71,6 +78,7 @@
   color: $mine-shaft;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .form__input {
@@ -83,23 +91,23 @@
   flex-shrink: 1;
   width: 100px;
   padding: 13px 15px;
-  border: 1px solid $mercury;
-  outline: none;
+  border: none;
+  outline: 1px solid $mercury;
 
   &::placeholder {
     color: $special-dark-grey;
   }
 
   &:hover {
-    border: 1px solid $silver;
+    outline: 1px solid $silver;
   }
 
   &:focus {
-    border: 2px solid $special-dark-grey;
+    outline: 2px solid $special-dark-grey;
   }
 
   &--error {
-    border: 2px solid $vivid-tangerine;
+    outline: 2px solid $vivid-tangerine;
   }
 }
 
@@ -125,7 +133,7 @@
 .form__input-radio:checked + .form__label-radio::after {
   content: "";
   position: absolute;
-  left: 8.5px;
+  left: 9px;
   width: 14px;
   height: 14px;
   background-color: $main-theme;
@@ -152,7 +160,7 @@
 
 .form__comment {
   width: 100%;
-  border: 1px solid $mercury;
+  outline: 1px solid $mercury;
   resize: none;
   font-size: 16px;
   line-height: 18px;
@@ -160,10 +168,22 @@
   color: $special-dark-grey;
   font-family: $custom-font;
   padding: 13px 12px 13px 15px;
-  outline: none;
+  border: none;
 
   &::placeholder {
     color: $special-dark-grey;
+  }
+
+  &:hover {
+    outline: 1px solid $silver;
+  }
+
+  &:focus {
+    outline: 2px solid $special-dark-grey;
+  }
+
+  &--error {
+    outline: 2px solid $vivid-tangerine;
   }
 }
 
@@ -175,6 +195,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";

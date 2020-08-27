@@ -66,19 +66,21 @@
               <fieldset class="form__field form__field--result">
                 <legend class="visually-hidden">Желаемый результат</legend>
 
-                <div class="form__controls">
-                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="slimming" id="form__slimming" checked>
-                  <label class="form__label-radio" for="form__slimming">Похудение</label>
-                </div>
+                <div class="form__field-wrap">
+                  <div class="form__controls">
+                    <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="slimming" id="form__slimming" checked>
+                    <label class="form__label-radio" for="form__slimming">Похудение</label>
+                  </div>
 
-                <div class="form__controls">
-                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="weight gain" id="form__weight-gain">
-                  <label class="form__label-radio" for="form__weight-gain">Набор массы</label>
-                </div>
+                  <div class="form__controls">
+                    <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="weight gain" id="form__weight-gain">
+                    <label class="form__label-radio" for="form__weight-gain">Набор массы</label>
+                  </div>
 
-                <div class="form__controls">
-                  <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="need help" id="form__need-help">
-                  <label class="form__label-radio" for="form__need-help">Не знаю (нужен совет)</label>
+                  <div class="form__controls">
+                    <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="need help" id="form__need-help">
+                    <label class="form__label-radio" for="form__need-help">Не знаю (нужен совет)</label>
+                  </div>
                 </div>
               </fieldset>
             </div>
@@ -157,7 +159,7 @@
             </address>
           </div>
 
-          <div class="location__map">
+          <div class="location__map" id="map">
           </div>
         </div>
       </section>
@@ -227,5 +229,10 @@
         </div>
       </section>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=13176f80-7b58-4301-b34c-362e451e03ac&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/options.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
