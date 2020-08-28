@@ -27,6 +27,7 @@
 .main__information {
   padding-top: 27px;
   padding-bottom: 32px;
+  border-top: 1px solid $mercury;
 }
 
 @media (min-width: $tablet-width) {
@@ -44,6 +45,8 @@
 
   .main__information {
     padding-top: 64px;
+    padding-bottom: 72px;
+    border: none;
   }
 }
 
@@ -54,5 +57,9 @@
 
   .main__example {
     padding-bottom: 64px;
+  }
+
+  .main__information {
+    padding-top: 73px;
   }
 }

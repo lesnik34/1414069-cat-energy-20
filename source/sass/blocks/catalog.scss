@@ -27,6 +27,10 @@
 .catalog__item {
   position: relative;
 
+  &--more {
+    order: 100;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -54,9 +58,9 @@
 }
 
 .catalog__card--more {
+  $top: 40px;
   padding-top: 70px;
   position: relative;
-  $top: 40px;
 
   &::before {
     $width: 30px;

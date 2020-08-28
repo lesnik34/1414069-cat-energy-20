@@ -41,11 +41,25 @@
 }
 
 .slider__control-btn {
+  padding: 0;
+  padding-bottom: 4px;
   font-family: $custom-font;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 20px;
   margin-right: 17px;
+  border: none;
+  border-bottom: 1px dotted $basic-black;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $basic-black;
+  }
+
+  &:active {
+    border-bottom: none;
+  }
 }
 
 .slider__control {
@@ -64,6 +78,16 @@
   background-color: $main-theme;
   border-radius: inherit;
   margin: auto;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:active {
+    box-shadow: 0 0 0 1px $main-theme;
+  }
 }
 
 @media (min-width: 768px) {

@@ -10,6 +10,15 @@
     color: $basic-white;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      background-color: $apple;
+    }
+
+    &:active {
+      color: rgba($basic-white, 0.3);
+    }
   }
 
   &--secondary {
@@ -17,23 +26,38 @@
     color: $special-dark-grey;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      background-color: $gallery;
+    }
+
+    &:active {
+      color: rgba($special-dark-grey, 0.3);
+    }
   }
 
   &--arrow {
+    $arrow-length: 24px;
     color: $basic-black;
-    position: relative;
-    padding-right: 50px;
+    padding-right: calc(25px + #{$arrow-length});
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-position: center right;
+    background-size: $arrow-length 10px;
+    background-repeat: no-repeat;
+    transition: $transition-time;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 7px;
-      width: 24px;
-      height: 12px;
-      background-image: url("../../img/icon-right-arrow-long.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
+    &:hover,
+    &:focus {
+      $arrow-length: 34px;
+      padding-right: calc(25px + #{$arrow-length});
+      background-size: $arrow-length 10px;
+      background-image: url("../../img/icon-right-arrow-verylong.svg");
+      width: 32px;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
