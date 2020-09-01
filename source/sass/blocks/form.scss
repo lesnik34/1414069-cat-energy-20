@@ -92,22 +92,32 @@
   width: 100px;
   padding: 13px 15px;
   border: none;
-  outline: 1px solid $mercury;
+  box-shadow: 0 0 0 1px $mercury;
+  outline: none;
 
   &::placeholder {
     color: $special-dark-grey;
   }
 
   &:hover {
-    outline: 1px solid $silver;
+    box-shadow: 0 0 0 1px $silver;
   }
 
   &:focus {
-    outline: 2px solid $special-dark-grey;
+    box-shadow: 0 0 0 2px $special-dark-grey;
   }
 
   &--error {
-    outline: 2px solid $vivid-tangerine;
+    box-shadow: 0 0 0 2px $vivid-tangerine;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px $vivid-tangerine;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px $vivid-tangerine;
+    }
   }
 }
 
@@ -160,7 +170,8 @@
 
 .form__comment {
   width: 100%;
-  outline: 1px solid $mercury;
+  outline: none;
+  box-shadow: 0 0 0 1px $mercury;
   resize: none;
   font-size: 16px;
   line-height: 18px;
@@ -175,15 +186,24 @@
   }
 
   &:hover {
-    outline: 1px solid $silver;
+    box-shadow: 0 0 0 1px $silver;
   }
 
   &:focus {
-    outline: 2px solid $special-dark-grey;
+    box-shadow: 0 0 0 2px $special-dark-grey;
   }
 
   &--error {
-    outline: 2px solid $vivid-tangerine;
+    box-shadow: 0 0 0 2px $vivid-tangerine;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px $vivid-tangerine;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px $vivid-tangerine;
+    }
   }
 }
 

@@ -102,7 +102,14 @@
 
   .product-card__img-wrap {
     margin-top: -90px;
-    min-height: 247px;
+    width: auto;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+  }
+
+  .product-card__image {
+    width: 252px;
   }
 }
 

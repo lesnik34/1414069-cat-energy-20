@@ -1,9 +1,15 @@
 'use strict';
 
 (function () {
-  let sliderProgress = document.querySelector('.slider__progress');
+  const sliderProgress = document.querySelector('.slider__progress');
+  const sliderWrapper = document.querySelector('.slider__wrapper');
 
-  sliderProgress.addEventListener('mousedown', window.move.onMouseDown);
+  if (sliderWrapper) {
+    sliderWrapper.addEventListener('touchstart', window.move.onTouchStart);
+  }
+  if (sliderProgress) {
+    sliderProgress.addEventListener('mousedown', window.move.onMouseDown);
+  }
 
   window.map.createMap();
 })();
