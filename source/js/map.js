@@ -1,32 +1,31 @@
 'use strict';
 
 (function () {
-  let getCurrentCenter = function () {
-    return window.matchMedia(window.options.MEDIA.desktop).matches ? window.options.WIDE_SHIFT : window.options.CENTER
+  const getCurrentCenter = () => window.matchMedia(window.options.MEDIA.desktop).matches ? window.options.WIDE_SHIFT : window.options.CENTER;
+  const getCurrentPinSize = () => window.matchMedia(window.options.MEDIA.mobile).matches ? window.options.PIN_SIZE.small : window.options.PIN_SIZE.big;
+  const getCurrentPinOffset = () => window.matchMedia(window.options.MEDIA.mobile).matches ? window.options.PIN_OFFSET.small : window.options.PIN_OFFSET.big;
+
+  const mapSettings = {
+    center: getCurrentCenter(),
+    zoom: window.options.ZOOM
   };
 
-  let getCurrentPinSize = function () {
-    return window.matchMedia(window.options.MEDIA.mobile).matches ? window.options.PIN_SIZE.small : window.options.PIN_SIZE.big
+  const iconSettings = {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/map-pin.png',
+    iconImageSize: getCurrentPinSize(),
+    iconImageOffset: getCurrentPinOffset()
   };
 
-  let getCurrentPinOffset = function () {
-    return window.matchMedia(window.options.MEDIA.mobile).matches ? window.options.PIN_OFFSET.small : window.options.PIN_OFFSET.big
-  }
+  const hintsSettings = {
+    hintContent: 'Наше местоположение',
+    balloonContent: 'ул.Большая Конюшенная, д. 19/8'
+  };
 
-  let initMap = function () {
-    let myMap = new ymaps.Map("map", {
-      center: getCurrentCenter(),
-      zoom: window.options.ZOOM
-    }),
-    customPin = new ymaps.Placemark(window.options.CENTER, {
-      hintContent: 'Наше местоположение',
-      balloonContent: 'Большая конюшенная'
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/map-pin.png',
-      iconImageSize: getCurrentPinSize(),
-      iconImageOffset: getCurrentPinOffset()
-    });
+  const initMap = function () {
+    const myMap = new ymaps.Map('map', mapSettings);
+
+    const customPin = new ymaps.Placemark(window.options.CENTER, hintsSettings, iconSettings);
 
     myMap.geoObjects.add(customPin);
   };
@@ -35,5 +34,5 @@
     createMap: function () {
       ymaps.ready(initMap);
     }
-  }
+  };
 })();

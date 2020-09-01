@@ -1,44 +1,33 @@
 'use strict';
 (function () {
+  const pinProgress = document.querySelector('.slider__progress');
+  const leftSlide = document.querySelector('.slider__slide--previous');
+  const rightSlide = document.querySelector('.slider__slide--next');
+  const sliderControl = document.querySelector('.slider__control');
+  const sliderWrapper = document.querySelector('.slider__wrapper');
+
   window.move = {
     onMouseDown: function (evt) {
-      let pinProgress = document.querySelector('.slider__progress');
-      let leftSlide = document.querySelector('.slider__slide--previous');
-      let rightSlide = document.querySelector('.slider__slide--next');
-      let sliderControl = document.querySelector('.slider__control');
-      let sliderWrapper = document.querySelector('.slider__wrapper');
-
-      if (!pinProgress.style.left) {
-        pinProgress.style.left = '0px'
-      }
-
-      leftSlide.style.width = sliderWrapper.clientWidth / 2 + 'px';
-      rightSlide.style.width = sliderWrapper.clientWidth / 2 + 'px';
-
       let startCoordsX = evt.clientX;
-
       evt.preventDefault();
 
-      let onMouseMove = function (moveEvt) {
-        let shift = startCoordsX - moveEvt.clientX;
-
-        startCoordsX = moveEvt.clientX;
-
-        var leftCoordinates = parseInt(pinProgress.style.left, 10) - shift;
+      const onMouseMove = function (moveEvt) {
+        const shift = startCoordsX - moveEvt.clientX;
+        const leftCoordinates = parseInt(pinProgress.style.left, 10) - shift;
 
         if (leftCoordinates >= window.options.LEFT_RANGE && leftCoordinates <= window.options.RIGHT_RANGE) {
           pinProgress.style.left = leftCoordinates + 'px';
-        } else {
-          document.removeEventListener('mousemove', onMouseMove);
         }
 
-        let perc = shift / (parseInt(sliderControl.clientWidth, 10) / 100);
+        const percentPerShift = parseInt(pinProgress.style.left, 10) / (sliderControl.clientWidth / 100);
 
-        leftSlide.style.width = parseInt(leftSlide.style.width, 10) - perc * (parseInt(sliderWrapper.clientWidth, 10) / 100)  + 'px';
-        rightSlide.style.width = parseInt(rightSlide.style.width, 10) + perc * (parseInt(sliderWrapper.clientWidth, 10) / 100)  + 'px';
+        leftSlide.style.width = sliderWrapper.clientWidth * (100 - percentPerShift) / 100 + 'px';
+        rightSlide.style.width = sliderWrapper.clientWidth * percentPerShift / 100 + 'px';
+
+        startCoordsX = moveEvt.clientX;
       };
 
-      var onMouseUp = function (upEvt) {
+      const onMouseUp = function (upEvt) {
         upEvt.preventDefault();
 
         document.removeEventListener('mousemove', onMouseMove);
@@ -47,6 +36,34 @@
 
       document.addEventListener('mousemove', onMouseMove);
       document.addEventListener('mouseup', onMouseUp);
+    },
+
+    onTouchStart: function (evt) {
+      let startCoordsX = evt.touches[0].clientX;
+      evt.preventDefault();
+
+      const onTouchMove = function (moveEvt) {
+        const endCoordsX = moveEvt.touches[0].clientX;
+        const shift = startCoordsX - endCoordsX;
+
+        if (endCoordsX >= 20 && endCoordsX <= 300) {
+          leftSlide.style.width = leftSlide.clientWidth - shift + 'px';
+
+          rightSlide.style.width = rightSlide.clientWidth + shift + 'px';
+        }
+
+        startCoordsX = moveEvt.touches[0].clientX;
+      };
+
+      const onTouchEnd = function (upEvt) {
+        upEvt.preventDefault();
+
+        document.removeEventListener('mousemove', onTouchMove);
+        document.removeEventListener('mouseup', onTouchEnd);
+      };
+
+      document.addEventListener('touchmove', onTouchMove);
+      document.addEventListener('touchend', onTouchEnd);
     }
   }
 })();

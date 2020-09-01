@@ -10,39 +10,3 @@
     opacity: 0.6;
   }
 }
-
-.logo__image {
-  min-width: 170px;
-
-  &--medium {
-    display: none;
-  }
-
-  &--big {
-    display: none;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .logo__image {
-    &--small {
-      display: none;
-    }
-
-    &--medium {
-      display: block;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .logo__image {
-    &--medium {
-      display: none;
-    }
-
-    &--big {
-      display: block;
-    }
-  }
-}
