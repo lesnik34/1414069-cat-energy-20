@@ -19,6 +19,19 @@
   }
 }
 
+.social-networks__image {
+  fill: $dove-gray;
+
+  &:hover,
+  &:focus {
+    fill: $main-theme;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .social-networks__list {
     border: none;
