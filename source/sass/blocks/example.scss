@@ -1,5 +1,5 @@
 .example {
-  background-color: $special-grey;
+  background-color: $basic-grey;
 }
 
 .example__title {
@@ -149,7 +149,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    background: linear-gradient($basic-white 0%, $basic-white 28%, $special-grey 28%, $special-grey 100%);
+    background: linear-gradient(180deg, $basic-white 28%, transparent 28%), linear-gradient(to right, $basic-grey 50%, #eaeaea 50%);
   }
 
   .example__container {

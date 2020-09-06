@@ -1,8 +1,5 @@
-.creators {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.creators__logo {
+  fill: $dove-gray;
 }
 
 .creators__link {
@@ -10,6 +7,17 @@
   font-size: 16px;
   line-height: 18px;
   color: $special-dark-grey;
+  display: flex;
+  align-items: center;
+
+  &:hover .creators__logo,
+  &:focus .creators__logo {
+    fill: $main-theme;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -13,6 +13,7 @@ $special-silver: #bababa;
 $gallery: #ebebeb;
 $apple: #5eaa2f;
 $vivid-tangerine: #ff8282;
+$dove-gray: #666666;
 
 $status-error: #ff8282;
 $main-theme: #68b738;
@@ -24,3 +25,9 @@ $transition-time: 200ms;
 
 $tablet-width: 768px;
 $desktop-width: 1440px;
+
+:root {
+  --basic-white: #ffffff;
+  --special-grey: #eaeaea;
+  --basic-grey: #f2f2f2;
+}

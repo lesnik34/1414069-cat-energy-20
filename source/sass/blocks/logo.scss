@@ -1,5 +1,8 @@
 .logo {
   display: block;
+  background-color: $basic-white;
+  position: relative;
+  z-index: 2;
 
   &:hover,
   &:focus {
@@ -10,3 +13,4 @@
     opacity: 0.6;
   }
 }
+

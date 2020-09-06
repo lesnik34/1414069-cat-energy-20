@@ -48,6 +48,7 @@
 @media (min-width: $tablet-width) {
   .location {
     padding-top: 66px;
+    background-color: $basic-grey;
   }
 
   .location__invite {
@@ -84,6 +85,7 @@
 @media (min-width: $desktop-width) {
   .location {
     padding-top: 0;
+    background-color: $basic-white;
   }
 
   .location__wrapper {

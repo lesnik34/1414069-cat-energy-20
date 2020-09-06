@@ -17,7 +17,7 @@
           </picture>
         </a>
 
-        <nav class="header__nav main-nav">
+        <nav class="header__nav main-nav nav-no-js"> <!-- nav-no-js -->
           <button class="main-nav__toggle button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -162,13 +162,13 @@
             </div>
 
             <div class="slider__controls">
-              <button class="slider__control-btn" type="button">Было</button>
+              <button class="slider__control-btn slider__control-btn--previous" type="button">Было</button>
 
               <div class="slider__control">
-                <div class="slider__progress" tabindex="0" style="left: 0;"></div>
+                <div class="slider__progress" tabindex="0"></div>
               </div>
 
-              <button class="slider__control-btn" type="button">Стало</button>
+              <button class="slider__control-btn slider__control-btn--next" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -227,11 +227,11 @@
           </ul>
 
           <div class="about__creators creators">
-            <a href="https://up.htmlacademy.ru/adaptive/20" class="creators__link">HTML Academy</a>
-
             <a href="https://up.htmlacademy.ru/adaptive/20" class="creators__link">
+              HTML Academy
+
               <svg class="creators__logo" width="27" height="34">
-                <use xlink:href="img/sprite.svg#"></use>
+                <use xlink:href="img/sprite.svg#htmlacademy"></use>
               </svg>
             </a>
           </div>
@@ -239,10 +239,7 @@
       </section>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=13176f80-7b58-4301-b34c-362e451e03ac&lang=ru_RU" type="text/javascript"></script>
-    <script src="js/options.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/move.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=13176f80-7b58-4301-b34c-362e451e03ac&lang=ru_RU"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

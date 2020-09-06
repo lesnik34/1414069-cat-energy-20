@@ -19,7 +19,7 @@
 
 
   &--previous {
-    width: 100%;
+    width: 50%;
     min-width: 0;
     max-width: 100%;
     background-image: url("../../img/before-mobile@1x.png");
@@ -36,7 +36,7 @@
     max-width: 100%;
     top: 0;
     right: 0;
-    width: 0;
+    width: 50%;
     background-image: url("../../img/after-mobile@1x.png");
     background-position: right center;
 
@@ -83,14 +83,18 @@
   display: flex;
   margin-right: 17px;
   align-items: center;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .slider__progress {
-  width: 20%;
+  width: 50%;
   height: 6px;
   background-color: $main-theme;
   border-radius: inherit;
   outline: none;
+  left: 50%;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -142,6 +146,8 @@
     border: none;
     background-color: $alto;
     align-items: normal;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .slider__progress {
@@ -151,7 +157,6 @@
     background-color: $main-theme;
     border-radius: 50%;
     border: 13px solid $basic-white;
-    position: relative;
     top: -200%;
   }
 }

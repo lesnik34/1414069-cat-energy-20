@@ -1,28 +1,25 @@
 'use strict';
+
 (function () {
   const pinProgress = document.querySelector('.slider__progress');
-  const leftSlide = document.querySelector('.slider__slide--previous');
-  const rightSlide = document.querySelector('.slider__slide--next');
   const sliderControl = document.querySelector('.slider__control');
   const sliderWrapper = document.querySelector('.slider__wrapper');
+  const rightSlide = document.querySelector('.slider__slide--next');
 
   window.move = {
     onMouseDown: function (evt) {
-      let startCoordsX = evt.clientX;
       evt.preventDefault();
+      window.util.setDefaultPinPosition();
+      let startCoordsX = evt.clientX;
 
       const onMouseMove = function (moveEvt) {
         const shift = startCoordsX - moveEvt.clientX;
-        const leftCoordinates = parseInt(pinProgress.style.left, 10) - shift;
 
-        if (leftCoordinates >= window.options.LEFT_RANGE && leftCoordinates <= window.options.RIGHT_RANGE) {
-          pinProgress.style.left = leftCoordinates + 'px';
-        }
+        const leftCoordinates = parseInt(pinProgress.style.left, 10) - shift;
+        window.util.setPinPosition(leftCoordinates);
 
         const percentPerShift = parseInt(pinProgress.style.left, 10) / (sliderControl.clientWidth / 100);
-
-        leftSlide.style.width = sliderWrapper.clientWidth * (100 - percentPerShift) / 100 + 'px';
-        rightSlide.style.width = sliderWrapper.clientWidth * percentPerShift / 100 + 'px';
+        window.util.setSlidesWidth(percentPerShift);
 
         startCoordsX = moveEvt.clientX;
       };
@@ -40,24 +37,21 @@
 
     onTouchStart: function (evt) {
       let startCoordsX = evt.touches[0].clientX;
-      evt.preventDefault();
+      window.util.setDefaultPinPosition();
 
       const onTouchMove = function (moveEvt) {
         const endCoordsX = moveEvt.touches[0].clientX;
+
         const shift = startCoordsX - endCoordsX;
+        window.util.setSlidesWidthMobile(endCoordsX, shift);
 
-        if (endCoordsX >= 20 && endCoordsX <= 300) {
-          leftSlide.style.width = leftSlide.clientWidth - shift + 'px';
-
-          rightSlide.style.width = rightSlide.clientWidth + shift + 'px';
-        }
+        const percentPerShift = rightSlide.clientWidth / (sliderWrapper.clientWidth / 100);
+        window.util.setPinPositionMobile(percentPerShift);
 
         startCoordsX = moveEvt.touches[0].clientX;
       };
 
-      const onTouchEnd = function (upEvt) {
-        upEvt.preventDefault();
-
+      const onTouchEnd = function () {
         document.removeEventListener('mousemove', onTouchMove);
         document.removeEventListener('mouseup', onTouchEnd);
       };
