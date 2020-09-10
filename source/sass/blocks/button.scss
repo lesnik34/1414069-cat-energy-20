@@ -40,7 +40,7 @@
   &--arrow {
     $arrow-length: 24px;
     color: $basic-black;
-    padding-right: calc(25px + #{$arrow-length});
+    padding-right: calc(15px + #{$arrow-length});
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-position: center right;
     background-size: $arrow-length 10px;
@@ -64,6 +64,17 @@
 
 @media (min-width: $tablet-width) {
   .button {
-    font-size: 16px;
+    font-size: 20px;
+
+    &--primary {
+      padding: 7px 26px;
+      line-height: 24px;
+    }
+
+    &--arrow {
+      $arrow-length: 35px;
+      font-size: 20px;
+      padding-right: calc(13px + #{$arrow-length});
+    }
   }
 }

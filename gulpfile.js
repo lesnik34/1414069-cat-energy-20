@@ -42,7 +42,7 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
-    'source/fonts/**/*.{woff, woff2}',
+    'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source/*.ico'
   ], {
@@ -58,7 +58,9 @@ exports.copy = copy;
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(plumber())
-    .pipe(htmlValidator())
+    .pipe(htmlValidator({
+      skipWarnings: true
+    }))
     .pipe(htmlValidator.reporter())
     .pipe(gulp.dest('build'))
     .pipe(sync.stream());

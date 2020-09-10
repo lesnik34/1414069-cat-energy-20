@@ -1,3 +1,7 @@
+.creators {
+  width: 100%;
+}
+
 .creators__logo {
   fill: $dove-gray;
 }
@@ -9,6 +13,7 @@
   color: $special-dark-grey;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   &:hover .creators__logo,
   &:focus .creators__logo {
@@ -23,5 +28,9 @@
 @media (min-width: $tablet-width) {
   .creators {
     width: auto;
+  }
+
+  .creators__logo {
+    margin-left: 20px;
   }
 }

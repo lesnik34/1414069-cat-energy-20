@@ -11,10 +11,15 @@
 }
 
 .about__company {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 @media (min-width: $tablet-width) {
+  .about {
+    padding-top: 49px;
+    padding-bottom: 55px;
+  }
+
   .about__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -22,5 +27,11 @@
 
   .about__company {
     margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    padding-top: 65px;
   }
 }

@@ -19,11 +19,11 @@
 
   window.util = {
     setBackGradient: function () {
-      const gradientStop = rightSlide.getBoundingClientRect().left;
-      const firstBreak = '28%';
+      const gradientStop = rightSlide.getBoundingClientRect().left / (document.documentElement.clientWidth / 100);
+      const firstBreak = '20%';
 
       example.style.background = `linear-gradient(180deg, ${BASIC_WHITE} ${firstBreak}, transparent ${firstBreak}),
-      linear-gradient(to right, ${BASIC_GREY} ${gradientStop}px, ${SPECIAL_GREY} ${gradientStop}px)`;
+      linear-gradient(to right, ${BASIC_GREY} ${gradientStop}%, ${SPECIAL_GREY} ${gradientStop}%)`;
     },
     setDefaultPinPosition: function () {
       if (!pinProgress.style.left) {

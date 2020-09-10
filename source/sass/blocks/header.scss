@@ -14,6 +14,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .header {
+    padding-top: 21px;
+  }
+
   .header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -26,6 +30,6 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    padding-top: 71px;
+    padding-top: 56px;
   }
 }

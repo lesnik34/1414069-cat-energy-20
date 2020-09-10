@@ -3,14 +3,14 @@
   font-family: $custom-font;
   font-size: 36px;
   line-height: 40px;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
   font-weight: normal;
 }
 
 .process__list {
   @include list-reset;
   display: grid;
-  gap: 24px;
+  gap: 20px;
 }
 
 .process__item {
@@ -59,7 +59,7 @@
 
 .process__text {
   margin: 0;
-  padding-left: 75px;
+  padding-left: 80px;
   color: $special-dark-grey;
 }
 
@@ -71,17 +71,18 @@
   .process__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 45px;
+    margin-bottom: 68px;
   }
 
   .process__list {
-    gap: 100px;
+    row-gap: 98px;
+    column-gap: 62px;
     grid-template-columns: 1fr 1fr;
     counter-reset: customCounter;
   }
 
   .process__item {
-    padding-right: 16.5%;
+    padding-right: 20%;
     min-height: 220px;
     position: relative;
 
@@ -97,7 +98,7 @@
       font-family: $custom-font;
       font-size: 280px;
       position: absolute;
-      right: 0;
+      right: 85px;
       bottom: 110px;
       z-index: 1;
     }
@@ -105,19 +106,33 @@
 
   .process__text {
     padding: 0;
-    padding-top: 100px;
+    padding-top: 114px;
     font-size: 16px;
     position: relative;
     z-index: 2;
+    line-height: 23px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .process__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
   }
 
   .process {
     border: none;
+  }
+
+  .process__title {
+    margin-bottom: 72px;
+  }
+
+  .process__item {
+    padding-right: 0;
+
+    &::after {
+      right: 7px;
+    }
   }
 }

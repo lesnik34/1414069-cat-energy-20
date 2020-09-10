@@ -13,6 +13,8 @@
     if (window.matchMedia(window.options.MEDIA.desktop).matches) {
       window.util.setBackGradient();
       sliderProgress.addEventListener('mousedown', window.move.onMouseDown);
+    } else if (window.matchMedia(window.options.MEDIA.tablet).matches) {
+      sliderProgress.addEventListener('mousedown', window.move.onMouseDown);
     } else {
       sliderWrapper.addEventListener('touchstart', window.move.onTouchStart);
     }
