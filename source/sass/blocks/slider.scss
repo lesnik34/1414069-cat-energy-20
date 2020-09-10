@@ -61,17 +61,7 @@
   line-height: 20px;
   margin-right: 17px;
   border: none;
-  border-bottom: 1px dotted $basic-black;
   outline: none;
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid $basic-black;
-  }
-
-  &:active {
-    border-bottom: none;
-  }
 }
 
 .slider__control {
@@ -109,10 +99,11 @@
 @media (min-width: 768px) {
   .slider__wrapper {
     width: 680px;
+    margin-bottom: 15px;
   }
 
   .slider__slide {
-    height: 600px;
+    height: 523px;
 
     &--previous {
       background-image: url("../../img/before-tablet@1x.png");
@@ -137,6 +128,17 @@
 
   .slider__control-btn {
     font-size: 20px;
+
+    border-bottom: 1px dotted $basic-black;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $basic-black;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .slider__control {
@@ -162,11 +164,21 @@
 }
 
 @media (min-width: $desktop-width) {
+  .slider {
+    margin-top: -49px;
+  }
+
+  .slider__wrapper {
+    margin-bottom: 41px;
+    width: 625px;
+  }
+
   .slider__slide {
     height: 510px;
 
     &--previous {
       background-image: url("../../img/before-desktop@1x.png");
+      background-position: -38px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/before-desktop@2x.png");
@@ -175,6 +187,7 @@
 
     &--next {
       background-image: url("../../img/after-desktop@1x.png");
+      background-position: right;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/after-desktop@2x.png");

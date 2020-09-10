@@ -15,6 +15,7 @@
   margin: 0;
   color: $special-dark-grey;
   margin-bottom: 25px;
+  width: 99%;
 }
 
 .example__value {
@@ -87,23 +88,25 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    background: linear-gradient($basic-white 0%, $basic-white 65%, $special-grey 65%, $special-grey 100%);
+    background: linear-gradient($basic-white 0%, $basic-white 57%, $special-grey 57%, $special-grey 100%);
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
+    margin-bottom: 66px;
   }
 
   .example__text {
     font-size: 16px;
+    line-height: 23px;
     margin-bottom: 53px;
   }
 
   .example__results {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 86px;
   }
 
   .example__wrapper {
@@ -168,6 +171,7 @@
   .example__results {
     flex-direction: column;
     align-items: start;
+    margin-bottom: 0;
   }
 
   .example__total-wrapper {
@@ -182,7 +186,11 @@
 
   .example__wrapper {
     width: auto;
-    margin-bottom: 56px;
+    margin-bottom: 61px;
+  }
+
+  .example__main-wrap {
+    margin-right: auto;
   }
 
   .example__detail {
@@ -191,5 +199,11 @@
 
   .example__result {
     min-width: 165px;
+    margin-right: 39px;
+  }
+
+  .example__value {
+    margin-top: 24px;
+    margin-bottom: 13px;
   }
 }

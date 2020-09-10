@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -24,13 +26,13 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link main-nav__link--index main-nav__link--active">Главная</a>
+            <a href="index.html" class="main-nav__link ">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link main-nav__link--index">Каталог продукции</a>
+            <a href="catalog.html" class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link main-nav__link--index">Подбор программы</a>
+            <a href="form.html" class="main-nav__link main-nav__link--active">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -51,7 +53,7 @@
 
                 <div class="form__controls">
                   <label class="form__label" for="form__cat-name">Имя:<sup>*</sup></label>
-                  <input class="form__input form__input--error" type="text" name="name" id="form__cat-name" placeholder="Барсик" required>
+                  <input class="form__input" type="text" name="name" id="form__cat-name" placeholder="Барсик" required> <!-- form__input--error -->
                 </div>
 
                 <div class="form__controls">
@@ -81,7 +83,7 @@
 
                   <div class="form__controls">
                     <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="need help" id="form__need-help">
-                    <label class="form__label-radio" for="form__need-help">Не знаю (нужен совет)</label>
+                    <label class="form__label-radio" for="form__need-help">Не знаю (нужен ваш совет)</label>
                   </div>
                 </div>
               </fieldset>
@@ -93,12 +95,18 @@
               <div class="form__wrapper form__wrapper--contacts">
                 <div class="form__controls form__controls--email">
                   <label class="form__label" for="form__email">E-mail:<sup>*</sup></label>
-                  <input class="form__input" type="email" name="email" id="form__email" placeholder="Kuklachev@gmail.com" required>
+                  <input class="form__input form__input--email" type="email" name="email" id="form__email" placeholder="Kuklachev@gmail.com" required>
+                  <svg width="20" height="14" class="form__icon form__icon--email">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
                 </div>
 
                 <div class="form__controls form__controls--phone">
                   <label class="form__label" for="form__phone">Телефон:<sup>*</sup></label>
-                  <input class="form__input" type="tel" name="phone" id="form__phone" placeholder="8 (960) 900-60-90" required>
+                  <input class="form__input form__input--tel" type="tel" name="phone" id="form__phone" placeholder="8 (960) 900-60-90" required>
+                  <svg width="20" height="20" class="form__icon form__icon--phone">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
                 </div>
               </div>
             </fieldset>
@@ -149,10 +157,10 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__location location">
+      <section class="footer__location location location--secondary">
         <div class="container location__wrapper">
           <div class="location__invite">
-            <h3 class="location__title">Приглашаем к сотрудничеству дилеров!</h3>
+            <h3 class="location__title">Приглашаем <br> к сотрудничеству дилеров!</h3>
 
             <address class="location__address">
               ул. Большая
@@ -178,21 +186,21 @@
           <ul class="about__social-networks social-networks social-networks__list">
             <li class="social-networks__item">
               <a href="#" class="social-networks__link">
-                <svg class="social-networks__image" width="23" height="16">
+                <svg class="social-networks__image social-networks__image--vk" width="23" height="16">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social-networks__item">
               <a href="#" class="social-networks__link">
-                <svg class="social-networks__image" width="16" height="16">
+                <svg class="social-networks__image social-networks__image--insta" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="social-networks__item">
               <a href="#" class="social-networks__link">
-                <svg class="social-networks__image" width="22" height="22">
+                <svg class="social-networks__image social-networks__image--fb" width="22" height="22">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
               </a>

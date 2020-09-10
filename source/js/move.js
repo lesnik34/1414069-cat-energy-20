@@ -13,6 +13,7 @@
       let startCoordsX = evt.clientX;
 
       const onMouseMove = function (moveEvt) {
+
         const shift = startCoordsX - moveEvt.clientX;
 
         const leftCoordinates = parseInt(pinProgress.style.left, 10) - shift;
@@ -52,8 +53,8 @@
       };
 
       const onTouchEnd = function () {
-        document.removeEventListener('mousemove', onTouchMove);
-        document.removeEventListener('mouseup', onTouchEnd);
+        document.removeEventListener('touchmove', onTouchMove);
+        document.removeEventListener('touchend', onTouchEnd);
       };
 
       document.addEventListener('touchmove', onTouchMove);
