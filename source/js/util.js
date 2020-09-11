@@ -27,14 +27,14 @@
     },
     setDefaultPinPosition: function () {
       if (!pinProgress.style.left) {
-        pinProgress.style.left = sliderControl.clientWidth / 2 - pinProgress.clientWidth / 2 + 'px';
+        pinProgress.style.left = (sliderControl.clientWidth - window.options.CONTROL_MARGIN) / 2 - pinProgress.clientWidth / 2 + 'px';
       }
     },
     setPinPosition: function (leftCoordinates) {
       const LEFT_RANGE = 0;
       const RIGHT_RANGE = sliderControl.clientWidth;
 
-      if (leftCoordinates >= LEFT_RANGE && leftCoordinates <= RIGHT_RANGE) {
+      if (leftCoordinates >= LEFT_RANGE && leftCoordinates <= RIGHT_RANGE - window.options.CONTROL_MARGIN) {
         pinProgress.style.left = leftCoordinates + 'px';
 
         if (window.matchMedia(window.options.MEDIA.desktop).matches) {

@@ -141,7 +141,7 @@
   }
 
   .programs__article {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-right: 50px;
 
     &::before {
@@ -149,6 +149,10 @@
       height: 100px;
       top: 46px;
       left: 52px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
     }
   }
 

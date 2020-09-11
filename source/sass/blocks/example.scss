@@ -40,7 +40,7 @@
   width: $detail-width;
   left: calc(50% - #{$detail-width} / 2);
   text-align: center;
-  background-color: $special-grey;
+  background-color: $basic-grey;
 }
 
 .example__wrapper {
@@ -194,7 +194,7 @@
   }
 
   .example__detail {
-    background-color: $special-grey;
+    background-color: $basic-grey;
   }
 
   .example__result {

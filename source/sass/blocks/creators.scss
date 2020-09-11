@@ -4,6 +4,8 @@
 
 .creators__logo {
   fill: $dove-gray;
+  width: 39px;
+  height: 49px;
 }
 
 .creators__link {
@@ -32,5 +34,12 @@
 
   .creators__logo {
     margin-left: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .creators__logo {
+    width: 42px;
+    height: 52px;
   }
 }

@@ -19,6 +19,7 @@
   };
 
   const ZOOM = 18;
+  const CONTROL_MARGIN = 23;
 
   window.options = {
     CENTER: CENTER,
@@ -27,5 +28,6 @@
     PIN_OFFSET: PIN_OFFSET,
     MEDIA: MEDIA,
     ZOOM: ZOOM,
+    CONTROL_MARGIN: CONTROL_MARGIN
   };
 })();

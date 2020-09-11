@@ -169,6 +169,10 @@
   border-radius: 50%;
 }
 
+.form__input-radio:focus + .form__label-radio::before {
+  border-color: $special-dark-grey;
+}
+
 .form__subtitle {
   font-size: 24px;
   line-height: 26px;
@@ -250,6 +254,10 @@
 .form__label-check:hover.form__label-check::before,
 .form__label-check:focus.form__label-check::before {
   border: 1px solid $special-silver;
+}
+
+.form__check:focus + .form__label-check::before {
+  border: 1px solid $special-dark-grey;
 }
 
 .form__label-check:active {
@@ -486,6 +494,14 @@
     font-size: 16px;
     line-height: 16px;
   }
+
+  .form__icon--email {
+    top: 19px;
+  }
+
+  .form__icon--phone {
+    top: 18px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -559,5 +575,10 @@
     &--comment {
       padding-bottom: 73px;
     }
+  }
+
+  .form__comment {
+    padding-top: 16px;
+    padding-left: 18px;
   }
 }

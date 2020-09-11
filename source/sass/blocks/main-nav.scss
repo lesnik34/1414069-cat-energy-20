@@ -120,6 +120,7 @@
     border: none;
     padding: 0;
     margin-right: 35px;
+    margin-bottom: 18px;
 
     &:last-child {
       margin-right: 0;
@@ -159,5 +160,9 @@
 
   .main-nav__link {
     font-size: 20px;
+  }
+
+  .main-nav__list {
+    max-width: 580px;
   }
 }
