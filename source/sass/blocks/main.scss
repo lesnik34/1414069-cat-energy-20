@@ -36,7 +36,7 @@
 
 @media (min-width: $tablet-width) {
   .main__promo {
-    padding-top: 32px;
+    padding-top: 31px;
     padding-bottom: 0;
   }
 
@@ -46,15 +46,15 @@
 
   .main__example {
     padding-top: 43px;
-    padding-bottom: 72px;
+    padding-bottom: 63px;
   }
 
   .main__catalog {
-    padding-top: 55px;
+    padding-top: 37px;
   }
 
   .main__information {
-    padding-top: 55px;
+    padding-top: 36px;
     padding-bottom: 75px;
     border: none;
   }
@@ -79,8 +79,8 @@
   }
 
   .main__information {
-    padding-top: 73px;
-    padding-bottom: 93px;
+    padding-top: 52px;
+    padding-bottom: 76px;
   }
 
   .main__programs {
@@ -88,10 +88,14 @@
   }
 
   .main__process {
-    padding-bottom: 90px;
+    padding-bottom: 97px;
   }
 
   .main__catalog {
-    padding-top: 68px;
+    padding-top: 52px;
+  }
+
+  .main__extra {
+    padding-bottom: 86px;
   }
 }

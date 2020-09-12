@@ -38,6 +38,7 @@
     margin: 0;
     padding: 0;
     width: auto;
+    margin-left: 32px;
   }
 
   .social-networks__image--vk {
@@ -53,5 +54,13 @@
   .social-networks__image--fb {
     width: 29px;
     height: 29px;
+  }
+
+  .social-networks__item {
+    margin-right: 29px;
+
+    &:nth-child(2) {
+      margin-right: 17px;
+    }
   }
 }

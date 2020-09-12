@@ -110,7 +110,7 @@
   }
 
   .example__wrapper {
-    width: 50%;
+    width: 52%;
     margin-bottom: 0;
   }
 
@@ -123,7 +123,7 @@
 
   .example__value {
     font-size: 30px;
-    margin-top: 16px;
+    margin-top: 22px;
     margin-bottom: 15px;
   }
 
@@ -152,7 +152,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    background: linear-gradient(180deg, $basic-white 28%, transparent 28%), linear-gradient(to right, $basic-grey 50%, #eaeaea 50%);
+    background: linear-gradient(180deg, $basic-white 23%, transparent 23%), linear-gradient(to right, $basic-grey 50%, #eaeaea 50%);
   }
 
   .example__container {

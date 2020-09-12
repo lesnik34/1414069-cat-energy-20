@@ -352,6 +352,7 @@
 
     &--extra {
       padding-top: 0;
+      padding-bottom: 22px;
     }
 
     &::before {
@@ -378,6 +379,10 @@
   .form__input {
     font-size: 20px;
     line-height: 20px;
+
+    &--weight {
+      padding-left: 21px;
+    }
   }
 
   .form__label {
@@ -488,6 +493,7 @@
     margin-bottom: 0;
     margin-right: 70px;
     font-size: 20px;
+    padding: 12px;
   }
 
   .form__clarification {
@@ -517,11 +523,12 @@
   .form__wrapper {
     &--personal {
       display: flex;
-      margin-bottom: 65px;
+      margin-bottom: 68px;
     }
 
     &--contacts {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -530,20 +537,23 @@
       flex-grow: 1;
       margin-right: 78px;
       margin-bottom: 0;
+      min-width: 550px;
     }
 
     &--phone {
       flex-grow: 1;
+      min-width: 550px;
     }
 
     &--extra {
       width: auto;
       margin-bottom: 0;
       flex-grow: 1;
-      margin-right: 50px;
+      margin-right: 76px;
+      max-width: 250px;
 
       &:nth-child(2n) {
-        margin-right: 50px;
+        margin-right: 73px;
       }
 
       &:last-child {
@@ -565,7 +575,7 @@
 
     &--result {
       margin-bottom: 0;
-      padding-top: 11px;
+      padding-top: 21px;
     }
 
     &--extra {
@@ -577,8 +587,34 @@
     }
   }
 
+  .form__label-radio {
+    &::before {
+      margin-right: 19px;
+    }
+  }
+
+  .form__input {
+    &--name {
+      padding-left: 18px;
+    }
+
+    &--weight {
+      padding-left: 21px;
+    }
+  }
+
   .form__comment {
     padding-top: 16px;
     padding-left: 18px;
+  }
+
+  .form__submit {
+    padding: 12px;
+    width: 47%;
+    margin-right: 78px;
+  }
+
+  .form__text {
+    margin-bottom: 78px;
   }
 }

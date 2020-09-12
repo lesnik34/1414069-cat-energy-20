@@ -19,7 +19,7 @@
 
 
   &--previous {
-    width: 50%;
+    width: 100%;
     min-width: 0;
     max-width: 100%;
     background-image: url("../../img/before-mobile@1x.png");
@@ -36,7 +36,7 @@
     max-width: 100%;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 0;
     background-image: url("../../img/after-mobile@1x.png");
     background-position: right center;
 
@@ -62,6 +62,10 @@
   margin-right: 17px;
   border: none;
   outline: none;
+
+  &--previous {
+    margin-left: 18px;
+  }
 }
 
 .slider__control {
@@ -83,7 +87,7 @@
   background-color: $main-theme;
   border-radius: inherit;
   outline: none;
-  left: 50%;
+  left: 0;
   position: relative;
 
   &:hover,
@@ -107,6 +111,7 @@
 
     &--previous {
       background-image: url("../../img/before-tablet@1x.png");
+      width: 50%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/before-tablet@2x.png");
@@ -115,6 +120,7 @@
 
     &--next {
       background-image: url("../../img/after-tablet@1x.png");
+      width: 50%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/after-tablet@2x.png");
@@ -139,6 +145,15 @@
     &:active {
       border-bottom: none;
     }
+
+    &--previous {
+      margin-left: 8px;
+      margin-right: 25px;
+    }
+
+    &--next {
+      margin-right: 11px;
+    }
   }
 
   .slider__control {
@@ -160,12 +175,14 @@
     border-radius: 50%;
     border: 13px solid $basic-white;
     top: -200%;
+    left: calc(50% - 17px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .slider {
     margin-top: -49px;
+    margin-right: -28px;
   }
 
   .slider__wrapper {
