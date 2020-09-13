@@ -17,13 +17,14 @@
 @media (min-width: $tablet-width) {
   .logo__image {
     margin-bottom: 32px;
-    width: 155px;
+    width: 174px;
+    height: 52px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo__image {
-    margin-bottom: 14px;
+    margin-bottom: 24px;
     width: 200px;
   }
 }
