@@ -545,7 +545,7 @@
   .form__wrapper {
     &--personal {
       display: flex;
-      margin-bottom: 64px;
+      margin-bottom: 68px;
     }
 
     &--contacts {
@@ -641,7 +641,8 @@
   }
 
   .form__text {
-    margin-bottom: 78px;
+    margin-bottom: 75px;
+    line-height: 25px;
   }
 
   .form__icon {
