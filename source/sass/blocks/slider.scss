@@ -7,7 +7,7 @@
 .slider__wrapper {
   display: flex;
   width: 311px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   position: relative;
 }
 
@@ -103,7 +103,7 @@
 @media (min-width: 768px) {
   .slider__wrapper {
     width: 680px;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 
   .slider__slide {
@@ -188,6 +188,10 @@
   .slider__wrapper {
     margin-bottom: 41px;
     width: 625px;
+  }
+
+  .slider__progress {
+    top: -250%;
   }
 
   .slider__slide {

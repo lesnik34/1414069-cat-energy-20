@@ -54,7 +54,7 @@
 
 .catalog__card {
   padding-top: 0;
-  padding-bottom: 23px;
+  padding-bottom: 27px;
 }
 
 .catalog__card--more {
@@ -140,7 +140,7 @@
     border: none;
     background-color: $basic-grey;
     width: 46%;
-    margin-bottom: 140px;
+    margin-bottom: 142px;
 
     &::before {
       display: none;
@@ -190,7 +190,7 @@
 
   .catalog__more-text {
     max-width: 170px;
-    margin-bottom: 87px;
+    margin-bottom: 80px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -216,6 +216,7 @@
   .catalog__more-text {
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 86px;
   }
 
   .catalog__list {

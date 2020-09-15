@@ -36,7 +36,7 @@
   color: $special-dark-grey;
   text-transform: lowercase;
   position: absolute;
-  bottom: -14px;
+  bottom: -16px;
   width: $detail-width;
   left: calc(50% - #{$detail-width} / 2);
   text-align: center;
@@ -152,7 +152,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    background: linear-gradient(180deg, $basic-white 23%, transparent 23%), linear-gradient(to right, $basic-grey 50%, #eaeaea 50%);
+    background: linear-gradient(180deg, $basic-white 23%, transparent 23%), linear-gradient(to right, $basic-grey 72.5%, #eaeaea 72.5%);
   }
 
   .example__container {

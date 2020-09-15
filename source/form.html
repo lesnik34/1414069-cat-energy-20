@@ -71,17 +71,17 @@
                 <legend class="visually-hidden">Желаемый результат</legend>
 
                 <div class="form__field-wrap">
-                  <div class="form__controls">
+                  <div class="form__controls form__controls--radio">
                     <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="slimming" id="form__slimming" checked>
                     <label class="form__label-radio" for="form__slimming">Похудение</label>
                   </div>
 
-                  <div class="form__controls">
+                  <div class="form__controls form__controls--radio">
                     <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="weight gain" id="form__weight-gain">
                     <label class="form__label-radio" for="form__weight-gain">Набор массы</label>
                   </div>
 
-                  <div class="form__controls">
+                  <div class="form__controls form__controls--radio">
                     <input class="form__input-radio visually-hidden" type="radio" name="wish-result" value="need help" id="form__need-help">
                     <label class="form__label-radio" for="form__need-help">Не знаю (нужен ваш совет)</label>
                   </div>
@@ -94,7 +94,7 @@
 
               <div class="form__wrapper form__wrapper--contacts">
                 <div class="form__controls form__controls--email">
-                  <label class="form__label" for="form__email">E-mail:<sup>*</sup></label>
+                  <label class="form__label form__label--contacts" for="form__email">E-mail:<sup>*</sup></label>
                   <input class="form__input form__input--email" type="email" name="email" id="form__email" placeholder="Kuklachev@gmail.com" required>
                   <svg width="20" height="14" class="form__icon form__icon--email">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="form__controls form__controls--phone">
-                  <label class="form__label" for="form__phone">Телефон:<sup>*</sup></label>
+                  <label class="form__label form__label--contacts" for="form__phone">Телефон:<sup>*</sup></label>
                   <input class="form__input form__input--tel" type="tel" name="phone" id="form__phone" placeholder="8 (960) 900-60-90" required>
                   <svg width="20" height="20" class="form__icon form__icon--phone">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -157,7 +157,7 @@
     </main>
 
     <footer class="footer">
-      <section class="footer__location location location--secondary">
+      <section class="footer__location location location--form">
         <div class="container location__wrapper">
           <div class="location__invite">
             <h3 class="location__title">Приглашаем <br> к сотрудничеству дилеров!</h3>

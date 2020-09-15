@@ -95,11 +95,12 @@
       left: calc(50% - 50vw);
       margin-right: 10px;
       background-color: #68b738;
-      align-self: center;
+      top: 23px;
     }
 
     &::after {
       margin-left: 36px;
+      margin-top: 23px;
     }
   }
 
@@ -114,7 +115,7 @@
     padding-left: 38px;
     padding-right: 38px;
     padding-top: 26px;
-    padding-bottom: 29px;
+    padding-bottom: 25px;
     border-top: 1px solid $basic-grey;
     border-right: 1px solid $basic-grey;
     border-left: 1px solid $basic-grey;
@@ -130,7 +131,7 @@
     width: 100%;
     margin-top: 27px;
     padding-top: 7px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
   }
 
   .extra__product {
@@ -172,6 +173,11 @@
 
     &::before {
       width: calc(50vw - 50% - 40px);
+      top: 17px;
+    }
+
+    &::after {
+      margin-top: 17px;
     }
   }
 
@@ -188,8 +194,8 @@
     align-items: center;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 
     &:nth-child(3) {
       padding-top: 13px;

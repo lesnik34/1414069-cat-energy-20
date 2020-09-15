@@ -16,14 +16,14 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding-top: 45px;
+    padding-top: 39px;
     padding-bottom: 55px;
   }
 
   .about__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
 
   .about__company {

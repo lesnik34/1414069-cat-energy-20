@@ -26,8 +26,8 @@
 
   &--result {
     margin-bottom: 26px;
-    padding-top: 17px;
-    padding-bottom: 19px;
+    padding-top: 21px;
+    padding-bottom: 21px;
 
     &::before {
       content: "";
@@ -59,8 +59,8 @@
   }
 
   &--extra {
-    padding-top: 28px;
-    padding-bottom: 27px;
+    padding-top: 33px;
+    padding-bottom: 33px;
   }
 }
 
@@ -80,6 +80,14 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--radio {
+    margin-bottom: 10px;
+  }
+
+  &--extra {
+    margin-bottom: 10px;
+  }
 }
 
 .form__label {
@@ -87,7 +95,11 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark-grey;
-  margin-right: 14px;
+  margin-right: 16px;
+
+  &--contacts {
+    margin-right: 12px;
+  }
 }
 
 .form__label-radio {
@@ -336,8 +348,9 @@
     &--result {
       border: 1px solid $alto;
       padding: 26px;
-      padding-bottom: 17px;
+      padding-bottom: 23px;
       margin-bottom: 76px;
+      padding-top: 23px;
     }
 
     &--contacts {
@@ -379,6 +392,8 @@
   .form__input {
     font-size: 20px;
     line-height: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
 
     &--weight {
       padding-left: 21px;
@@ -408,6 +423,9 @@
   }
 
   .form__controls {
+    margin-bottom: 20px;
+
+
     &--extra {
       width: 42.5%;
       margin-right: 13%;
@@ -420,6 +438,10 @@
       &:last-child {
         margin-bottom: 32px;
       }
+    }
+
+    &--radio {
+      margin-bottom: 11px;
     }
 
     .form__label-check {
@@ -523,7 +545,7 @@
   .form__wrapper {
     &--personal {
       display: flex;
-      margin-bottom: 68px;
+      margin-bottom: 64px;
     }
 
     &--contacts {
@@ -583,7 +605,11 @@
     }
 
     &--comment {
-      padding-bottom: 73px;
+      padding-bottom: 69px;
+    }
+
+    &--contacts {
+      padding-bottom: 65px;
     }
   }
 
@@ -616,5 +642,9 @@
 
   .form__text {
     margin-bottom: 78px;
+  }
+
+  .form__icon {
+    right: 18px;
   }
 }
