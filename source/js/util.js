@@ -22,6 +22,22 @@
       if (!window.matchMedia(window.options.MEDIA.desktop).matches) {
         example.style.background = null;
       }
+
+      if (window.matchMedia(window.options.MEDIA.mobile).matches) {
+        pinProgress.style.left = '0';
+        leftSlide.style.width = '100%';
+        rightSlide.style.width = '0';
+      }
+
+      if (window.matchMedia(window.options.MEDIA.tablet).matches) {
+        pinProgress.style.left = '50%';
+        leftSlide.style.width = '50%';
+        rightSlide.style.width = '50%';
+      }
+
+      if (window.matchMedia(window.options.MEDIA.desktop).matches) {
+        window.util.setBackGradient();
+      }
     },
     setBackGradient: function () {
       const gradientStop = rightSlide.getBoundingClientRect().left / (document.documentElement.clientWidth / 100);
