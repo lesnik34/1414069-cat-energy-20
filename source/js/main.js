@@ -8,7 +8,6 @@
   const nextControlBtn = document.querySelector('.slider__control-btn--next');
   const mainNavToggle = document.querySelector('.main-nav__toggle');
 
-
   if (body.classList.contains('page__body--index')) {
     if (window.matchMedia(window.options.MEDIA.desktop).matches) {
       window.util.setBackGradient();
@@ -28,6 +27,8 @@
     window.dialog.toggleMainNav();
     mainNavToggle.addEventListener('click', window.dialog.toggleMainNav);
   }
+
+  window.addEventListener('resize', window.util.onResize)
 
   window.util.fixNotMobileNav();
   window.map.createMap();

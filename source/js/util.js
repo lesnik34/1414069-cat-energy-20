@@ -18,6 +18,11 @@
     .getPropertyValue('--basic-white');
 
   window.util = {
+    onResize: function () {
+      if (!window.matchMedia(window.options.MEDIA.desktop).matches) {
+        example.style.background = null;
+      }
+    },
     setBackGradient: function () {
       const gradientStop = rightSlide.getBoundingClientRect().left / (document.documentElement.clientWidth / 100);
       const firstBreak = '23%';
